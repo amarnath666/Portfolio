@@ -3,7 +3,7 @@ import { IconButtonProps } from "@/app/lib/types";
 const PingButton = ({ name, onClick, icon }: IconButtonProps) => {
   return (
     <button
-      className="bg-[#18181b] border border-[#27272a] hover:border-gray-500 text-white py-2 px-4 rounded-lg leading-none font-light cursor-pointer flex items-center gap-2  text-sm sm:text-base"
+      className="bg-[#18181b] border border-[#27272a] hover:border-gray-500 text-white py-2 px-4 rounded-lg leading-none  cursor-pointer flex items-center gap-2  text-sm "
       onClick={onClick}
     >
       {/* Ping indicator */}

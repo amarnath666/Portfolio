@@ -2,7 +2,16 @@
 
 import Button from "./button";
 import PingButton from "./AnimatePingButton";
-import { IconDownload, IconBrandX } from "@tabler/icons-react";
+import {
+  IconDownload,
+  IconBrandX,
+  IconBrandGmail,
+  IconMail,
+  IconBrandGithub,
+  IconBrandLinkedin,
+} from "@tabler/icons-react";
+import { useRouter } from "next/router";
+import { Linkedin } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -23,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4 ">
-        <p className="text-gray-500 text-sm sm:text-[16px] font-light">
+        <p className="text-gray-500 text-base ">
           Senior Software Engineer building SaaS products and web apps. Find me
           on twitter for tech updates and memes.
           {/* I'm <span className="text-white">Amarnath Dhumal</span>, a software
@@ -34,8 +43,8 @@ const Hero = () => {
       <div className="flex flex-row  gap-4 ">
         <PingButton
           icon={<IconBrandX size={18} />}
-          name="Open to Work"
-          onClick={() => {}}
+          name="Open for Work"
+          onClick={() => window.open("https://x.com/AmarnathDhumal", "_blank")}
         />
         <Button
           icon={<IconDownload size={18} />}
@@ -43,6 +52,8 @@ const Hero = () => {
           onClick={() => {}}
         />
       </div>
+
+ 
     </div>
   );
 };
