@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ButtonProps {
   name: string;
   onClick: () => void;
@@ -15,4 +17,5 @@ export interface ProjectCardProps {
   videoSrc: string;
   liveUrl: string;
   githubUrl: string;
+  technologies: string[];
 }

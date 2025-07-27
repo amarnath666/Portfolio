@@ -1,6 +1,7 @@
 import Findme from "@/components/Findme";
 import Hero from "@/components/hero";
 import Projects from "@/components/Projects";
+import Work from "@/components/Work";
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <Hero />
         <Findme />
         <Projects />
+        <Work />
       </div>
     </div>
   );
