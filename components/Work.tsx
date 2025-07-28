@@ -23,7 +23,7 @@ Led cross-functional development teams on multiple full-stack projects, from pla
             "Node.js",
             "GraphQL",
             "MongoDB",
-          
+
             "LangChain",
             "AWS",
             "Hostinger",
@@ -36,13 +36,13 @@ Led cross-functional development teams on multiple full-stack projects, from pla
           timeLine: "Sep 2024 – Jan 2025",
           description: ` Oversaw the development of multiple web applications, ensuring timely delivery and technical excellence.`,
           technologies: [
-             "TypeScript",
+            "TypeScript",
             "Next.js",
             "React",
             "Node.js",
             "GraphQL",
             "MongoDB",
-          
+
             "LangChain",
             "AWS",
             "Hostinger",
@@ -63,12 +63,7 @@ Led cross-functional development teams on multiple full-stack projects, from pla
           timeLine: "July 2024 – August 2024",
           description:
             "Integrated dynamic features and resolved performance bottlenecks, enhancing the user experience and reducing load times by 25%.",
-          technologies: [
-           "JavaScript",
-           "React",
-           "Node.js",
-           "MongoDB",
-          ],
+          technologies: ["JavaScript", "React", "Node.js", "MongoDB"],
         },
       ],
     },
@@ -122,11 +117,12 @@ Led cross-functional development teams on multiple full-stack projects, from pla
                     "border-b border-gray-700 pb-2"
                 )}
               >
-               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
-  <h4 className="text-gray-200 font-medium">{position.role}</h4>
-  <span className="text-gray-400 text-sm font-medium">{position.timeLine}</span>
-</div>
-
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
+                  <h4 className="text-gray-200 font-medium">{position.role}</h4>
+                  <span className="text-gray-400 text-sm font-medium">
+                    {position.timeLine}
+                  </span>
+                </div>
 
                 <p className="text-gray-400 text-sm mb-2 whitespace-pre-line">
                   {position.description.trim()}

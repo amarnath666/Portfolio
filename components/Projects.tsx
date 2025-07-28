@@ -34,7 +34,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="pt-6">
+    <div >
       <hr className="w-full h-px bg-gray-700 border-none" />
       <p className="text-gray-500 text-base pt-2 pb-4">Projects</p>
 
