@@ -19,25 +19,25 @@ const ProjectCard = ({
   };
 
   return (
-    <div
+ <div
       onClick={() => window.open(liveUrl, "_blank")}
-      className="flex bg-[#18181b] border border-[#27272a] rounded-lg shadow-lg p-2 cursor-pointer relative 
-    transform transition-all duration-300 ease-out
-   hover:shadow hover:shadow-black/10
-    hover:border-[#3f3f46] hover:bg-[#1a1a1d]
-    group"
+      className="flex flex-col sm:flex-row bg-[#18181b] border border-[#27272a] rounded-lg shadow-lg px-4 py-2 sm:p-2 cursor-pointer relative 
+        transform transition-all duration-300 ease-out
+        hover:shadow hover:shadow-black/10
+        hover:border-[#3f3f46] hover:bg-[#1a1a1d]
+        group"
     >
       {/* Left: Video */}
-      <div className="w-1/2 relative overflow-hidden rounded-lg">
+      <div className="w-full sm:w-1/2 relative overflow-hidden rounded-lg">
         <video
           autoPlay
           muted
           loop
           onLoadedData={handleVideoLoad}
           onCanPlay={handleVideoLoad}
-          className={`w-full   transition-all duration-500 ease-out
-        group-hover:scale-105 
-        ${isVideoLoaded ? "opacity-100" : "opacity-0"}`}
+          className={`w-full transition-all duration-500 ease-out
+            group-hover:scale-105 
+            ${isVideoLoaded ? "opacity-100" : "opacity-0"}`}
           src={videoSrc}
         />
 
@@ -51,22 +51,16 @@ const ProjectCard = ({
       </div>
 
       {/* Right: Content */}
-      <div className="w-1/2 flex flex-col justify-center px-4 relative">
-        <h3
-          className="text-lg font-semibold text-white transition-colors duration-300
-     transform"
-        >
+      <div className="w-full sm:w-1/2 flex flex-col justify-center  sm:px-4 relative pt-4 sm:pt-0">
+        <h3 className="text-lg font-semibold text-white transition-colors duration-300">
           {title}
         </h3>
 
-        <p
-          className="text-gray-500 text-sm leading-relaxed py-1 transition-all duration-300
-      group-hover:text-gray-400 transform"
-        >
+        <p className="text-gray-400 text-sm leading-relaxed py-1 transition-all duration-300 group-hover:text-gray-300">
           {description}
         </p>
 
-        <div className="flex pt-1 pb-4 -space-x-2 transition-all duration-300">
+        <div className="flex pt-1 pb-4 -space-x-2 transition-all duration-300 flex-wrap">
           <LayoutGroup>
             {technologies.map((tech) => (
               <div key={tech} className="hover:z-20 relative">
@@ -76,10 +70,7 @@ const ProjectCard = ({
           </LayoutGroup>
         </div>
 
-        <div
-          className="flex gap-4 pt-2 transition-transform duration-300
-      transform"
-        >
+        <div className="flex gap-4 pt-2">
           <Button
             icon={<IconWorld size={18} />}
             name="Live URL"

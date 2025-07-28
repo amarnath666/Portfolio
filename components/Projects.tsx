@@ -16,7 +16,7 @@ const Projects = () => {
     {
       title: "Sidekick",
       description:
-        "A clean landing page template you can use for your side projects.",
+        "A clean landing page template that you can use for your side projects.",
       videoSrc: "/videos/SideKick.mp4",
       liveUrl: "https://sidekick.amarn.me",
       githubUrl: "https://github.com/amarnath666/Side-Project-Template",

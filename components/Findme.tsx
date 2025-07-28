@@ -19,7 +19,7 @@ const Findme = () => {
       <p className="text-gray-500 text-base pt-2 pb-4">
         Where to find me
       </p>
-      <div className="flex flex-row gap-4 ">
+      <div className="flex flex-row gap-4 flex-wrap ">
         <Button
           icon={<IconMail size={18} />}
           name="Email me"

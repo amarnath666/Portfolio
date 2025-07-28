@@ -2,16 +2,7 @@
 
 import Button from "./button";
 import PingButton from "./AnimatePingButton";
-import {
-  IconDownload,
-  IconBrandX,
-  IconBrandGmail,
-  IconMail,
-  IconBrandGithub,
-  IconBrandLinkedin,
-} from "@tabler/icons-react";
-import { useRouter } from "next/router";
-import { Linkedin } from "lucide-react";
+import { IconDownload, IconBrandX } from "@tabler/icons-react";
 
 const Hero = () => {
   return (
@@ -32,11 +23,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-col gap-4 ">
-        <p className="text-gray-500 text-base ">
-          Senior Software Engineer building SaaS products and web apps. Find me
-          on twitter for tech updates and memes.
-          {/* I'm <span className="text-white">Amarnath Dhumal</span>, a software
-        engineer and a passionate learner. */}
+        <p className="text-gray-400 text-base ">
+          Full Stack Developer building SaaS products and web apps.
         </p>
       </div>
 
@@ -49,11 +37,16 @@ const Hero = () => {
         <Button
           icon={<IconDownload size={18} />}
           name="Downlaod CV"
-          onClick={() => {}}
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "/Amarnath-Resume.pdf"; 
+            link.download = "Amarnath-Dhumal-CV.pdf"; 
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
         />
       </div>
-
- 
     </div>
   );
 };
