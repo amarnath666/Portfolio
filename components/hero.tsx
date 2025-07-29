@@ -17,7 +17,9 @@ const Hero = () => {
           <p className="text-[26px] font-bold font-doto text-[#fafafa]">
             Amarnath Dhumal
           </p>
-          <p className="text-gray-500 hover:text-gray-300 cursor-pointer">
+          <p 
+           onClick={() => window.open("https://x.com/AmarnathDhumal", "_blank")}
+          className="text-gray-500 hover:text-gray-300 cursor-pointer">
             @AmarnathDhumal
           </p>
         </div>
