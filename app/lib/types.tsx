@@ -15,6 +15,7 @@ export interface ProjectCardProps {
   title: string;
   description: string;
   videoSrc: string;
+  imageSrc: string;
   liveUrl: string;
   githubUrl: string;
   technologies: string[];

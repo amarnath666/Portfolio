@@ -9,6 +9,7 @@ const Projects = () => {
       title: "YT Notes",
       description: "AI agent that summarizes any youtube video in seconds.",
       videoSrc: "/videos/YTNotes.mp4",
+      imageSrc: "/images/ytnotes.png",
       liveUrl: "https://www.ytnotes.online",
       githubUrl: "https://github.com/amarnath666/youtube_ai_agent",
       technologies: ["Next.js", "TypeScript", "LangChain", "MongoDB", "Razorpay", "Tailwind CSS"],
@@ -18,6 +19,7 @@ const Projects = () => {
       description:
         "A clean landing page template that you can use for your side projects.",
       videoSrc: "/videos/SideKick.mp4",
+      imageSrc: "/images/sidekick.png",
       liveUrl: "https://sidekick.amarn.me",
       githubUrl: "https://github.com/amarnath666/Side-Project-Template",
       technologies: ["Next.js", "TypeScript",  "Tailwind CSS"],
@@ -27,6 +29,7 @@ const Projects = () => {
       description:
         " Powerful rich text editor for structured note-taking, paired with a dynamic canvas to sketch ideas and bring concepts to life.",
       videoSrc: "/videos/SketchSync.mp4",
+      imageSrc: "/images/sketchsync.png",
       liveUrl: "https://sketchsync-canvas.vercel.app",
       githubUrl: "https://github.com/amarnath666/SketchSync",
       technologies: ["Next.js", "TypeScript",  "Tailwind CSS", "Convex"],

@@ -9,6 +9,7 @@ const ProjectCard = ({
   title,
   description,
   videoSrc,
+  imageSrc,
   liveUrl,
   technologies,
 }: ProjectCardProps) => {
@@ -42,10 +43,15 @@ const ProjectCard = ({
         />
 
         {!isVideoLoaded && (
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse">
-            <div className="w-full h-full bg-gray-300 rounded-xl relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-shimmer"></div>
-            </div>
+          <div className="absolute inset-0">
+            <img
+              src={imageSrc}
+              alt={`${title} preview`}
+              className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105"
+            />
+            {/* <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+              <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+            </div> */}
           </div>
         )}
       </div>

@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     siteName: "Amarnath Dhumal",
     images: [
       {
-        url: "/images/meta.png", 
+        url: "/images/og.svg", 
         width: 1200,
-        height: 1200, // Square aspect ratio
+        height: 675, // Square aspect ratio
         alt: "Amarnath Dhumal - Full Stack Developer",
       },
     ],
@@ -51,6 +51,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Prefetch critical images */}
+        <link rel="prefetch" as="image" href="/images/profile.jpg" />
+        <link rel="prefetch" as="image" href="/images/ytnotes.png" />
+        <link rel="prefetch" as="image" href="/images/sidekick.png" />
+        <link rel="prefetch" as="image" href="/images/sketchsync.png" />
+        {/* Prefetch video metadata */}
+        <link rel="prefetch" as="video" href="/videos/YTNotes.mp4" />
+        <link rel="prefetch" as="video" href="/videos/SideKick.mp4" />
+        <link rel="prefetch" as="video" href="/videos/SketchSync.mp4" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} antialiased`}
       >
