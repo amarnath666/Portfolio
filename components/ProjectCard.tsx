@@ -4,6 +4,7 @@ import Button from "./button";
 import { IconBrandGithub, IconWorld } from "@tabler/icons-react";
 import StackItem from "./StactItem";
 import { LayoutGroup } from "motion/react";
+import Image from "next/image";
 
 const ProjectCard = ({
   title,
@@ -34,6 +35,8 @@ const ProjectCard = ({
           autoPlay
           muted
           loop
+          playsInline
+          preload="metadata"
           onLoadedData={handleVideoLoad}
           onCanPlay={handleVideoLoad}
           className={`w-full transition-all duration-500 ease-out
@@ -44,14 +47,13 @@ const ProjectCard = ({
 
         {!isVideoLoaded && (
           <div className="absolute inset-0">
-            <img
+            <Image
               src={imageSrc}
               alt={`${title} preview`}
-              className="w-full h-full object-cover transition-all duration-500 ease-out group-hover:scale-105"
+              fill
+              className="object-cover transition-all duration-500 ease-out group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
-            {/* <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-              <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-            </div> */}
           </div>
         )}
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Work = () => {
   const workData = [
@@ -93,10 +94,12 @@ Led cross-functional development teams on multiple full-stack projects, from pla
               }}
               className="cursor-pointer"
             >
-              <img
+              <Image
                 src={work.imageSrc}
                 alt={work.company}
-                className="w-[40px] h-[40px] rounded-full object-cover flex-shrink-0"
+                width={40}
+                height={40}
+                className="rounded-full object-cover flex-shrink-0"
               />
             </div>
 

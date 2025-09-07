@@ -3,15 +3,19 @@
 import Button from "./button";
 import PingButton from "./AnimatePingButton";
 import { IconDownload, IconBrandX } from "@tabler/icons-react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div className="flex flex-col items-start justify-center gap-6 ">
       <div className="flex flex-row  items-center ">
-        <img
-          src={"/images/profile.jpg"}
+        <Image
+          src="/images/profile.jpg"
           alt="profile"
-          className="rounded-full w-[80px] h-[80px]"
+          width={80}
+          height={80}
+          className="rounded-full"
+          priority
         />
         <div className="pl-4 ">
           <p className="text-[26px] font-bold font-doto text-[#fafafa]">
