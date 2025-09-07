@@ -1,8 +1,9 @@
 import React from "react";
 import { IconCode } from "@tabler/icons-react";
+import Image from "next/image";
 
 const Logo = ({ src }: { src: string }) => {
-  return <img src={src} alt="logo" className="w-4 h-4 rounded-full" />;
+  return <Image src={src} alt="icon" className="w-4 h-4 rounded-full" />;
 };
 
 export const getLogoForTechnology = (technology: string) => {

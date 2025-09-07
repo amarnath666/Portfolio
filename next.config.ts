@@ -7,7 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 
-const nextConfig: NextConfig = {
+const nextConfig: NextConfig = {  
   /* config options here */
    eslint: {
     // Ignore ESLint errors during builds
