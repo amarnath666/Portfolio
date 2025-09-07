@@ -3,7 +3,7 @@ import { IconCode } from "@tabler/icons-react";
 import Image from "next/image";
 
 const Logo = ({ src }: { src: string }) => {
-  return <Image src={src} alt="icon" className="w-4 h-4 rounded-full" />;
+  return <Image src={src} alt="icon" width={16} height={16} className="w-4 h-4 rounded-full" />;
 };
 
 export const getLogoForTechnology = (technology: string) => {

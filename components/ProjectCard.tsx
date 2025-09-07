@@ -21,7 +21,7 @@ const ProjectCard = ({
   };
 
   return (
- <div
+    <div
       onClick={() => window.open(liveUrl, "_blank")}
       className="flex flex-col sm:flex-row bg-[#18181b] border border-[#27272a] rounded-lg shadow-lg px-4 py-2 sm:p-2 cursor-pointer relative 
         transform transition-all duration-300 ease-out
