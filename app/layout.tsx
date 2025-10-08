@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Amarnath Dhumal",
     images: [
       {
-        url: "/images/og.svg",
+        url: "/images/og.png",
         width: 1200,
         height: 675, // Square aspect ratio
         alt: "Amarnath Dhumal - Full Stack Developer",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Amarnath Dhumal",
     description:
       "Amarnath Dhumal is a full stack developer building SaaS products and web apps.",
-    images: ["/images/meta.png"],
+    images: ["/images/og.png"],
   },
 };
 
