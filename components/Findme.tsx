@@ -14,7 +14,7 @@ import { Linkedin } from "lucide-react";
 const Findme = () => {
   return (
     <div className="pt-6">
-         <hr className="w-full h-px bg-gray-700 border-none " />
+         <hr className="w-full h-px bg-[#27272a] border-none " />
 
       <p className="text-gray-500 text-base pt-2 pb-4">
         Where to find me

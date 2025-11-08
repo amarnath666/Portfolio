@@ -77,7 +77,7 @@ Led cross-functional development teams on multiple full-stack projects, from pla
 
   return (
     <div className="pt-6">
-      <hr className="w-full h-px bg-gray-700 border-none" />
+          <hr className="w-full h-px bg-[#27272a] border-none " />
       <p className="text-gray-500 text-base pt-2 pb-4">
         Cool Places I Worked At
       </p>
@@ -117,7 +117,7 @@ Led cross-functional development teams on multiple full-stack projects, from pla
                 className={cn(
                   "mb-4",
                   posIdx !== work.positions.length - 1 &&
-                    "border-b border-gray-700 pb-2"
+                    "border-b border-[#27272a] pb-2"
                 )}
               >
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
