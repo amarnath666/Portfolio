@@ -138,7 +138,7 @@ Led cross-functional development teams on multiple full-stack projects, from pla
               {getAllTechnologies(work.positions).map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded"
+                  className="text-xs bg-neutral-800 text-gray-300 px-2 py-1 rounded"
                 >
                   {tech}
                 </span>
