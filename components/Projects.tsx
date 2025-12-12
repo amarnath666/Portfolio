@@ -2,6 +2,7 @@
 
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import ViewArea from "./ui/view-area";
 
 const Projects = () => {
   const projectData = [
@@ -22,7 +23,7 @@ const Projects = () => {
       imageSrc: "/images/sidekick.png",
       liveUrl: "https://sidekick.amarn.me",
       githubUrl: "https://github.com/amarnath666/Side-Project-Template",
-      technologies: ["Next.js", "TypeScript",  "Tailwind CSS"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
       title: "Sketch Sync",
@@ -32,21 +33,23 @@ const Projects = () => {
       imageSrc: "/images/sketchsync.png",
       liveUrl: "https://sketchsync-canvas.vercel.app",
       githubUrl: "https://github.com/amarnath666/SketchSync",
-      technologies: ["Next.js", "TypeScript",  "Tailwind CSS", "Convex"],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Convex"],
     },
   ];
 
   return (
-    <div >
-       <hr className="w-full h-px bg-[#27272a] border-none " />
-      <p className="text-gray-500 text-base pt-2 pb-4">Projects</p>
+    <ViewArea showBorderTop={false}>
+      <div >
 
-      <div className="grid grid-cols-1  gap-6">
-        {projectData.map((project, idx) => (
-          <ProjectCard key={idx} {...project} />
-        ))}
+        <p className="text-gray-500 text-base  pb-4">Projects</p>
+
+        <div className="grid grid-cols-1  gap-6">
+          {projectData.map((project, idx) => (
+            <ProjectCard key={idx} {...project} />
+          ))}
+        </div>
       </div>
-    </div>
+    </ViewArea>
   );
 };
 

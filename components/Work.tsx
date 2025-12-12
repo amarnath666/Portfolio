@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import ViewArea from "./ui/view-area";
 
 const Work = () => {
   const workData = [
@@ -76,78 +77,80 @@ Led cross-functional development teams on multiple full-stack projects, from pla
   };
 
   return (
-    <div className="pt-6">
-          <hr className="w-full h-px bg-[#27272a] border-none " />
-      <p className="text-gray-500 text-base pt-2 pb-4">
-        Cool Places I Worked At
-      </p>
+    <ViewArea showBorderTop={false} showBottomDots={false}>
+      <div >
 
-      {workData.map((work, idx) => (
-        <div key={idx} className="flex flex-col  relative mb-6">
-          {/* Logo + Content */}
-          <div className="flex flex-row items-center gap-4 pr-20">
-            {/* Logo */}
-            <div
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(work.liveUrl, "_blank");
-              }}
-              className="cursor-pointer"
-            >
-              <Image
-                src={work.imageSrc}
-                alt={work.company}
-                width={40}
-                height={40}
-                className="rounded-full object-cover flex-shrink-0"
-              />
-            </div>
+        <p className="text-gray-500 text-base  pb-4">
+          Cool Places I Worked At
+        </p>
 
-            {/* Company Info */}
-            <div className="flex-1">
-              <p className="text-base text-white font-medium">{work.company}</p>
-            </div>
-          </div>
-
-          {/* Role Descriptions */}
-          <div className="text-gray-400 text-sm pl-[52px] pr-4">
-            {work.positions.map((position, posIdx) => (
+        {workData.map((work, idx) => (
+          <div key={idx} className="flex flex-col  relative mb-6">
+            {/* Logo + Content */}
+            <div className="flex flex-row items-center gap-4 pr-20">
+              {/* Logo */}
               <div
-                key={posIdx}
-                className={cn(
-                  "mb-4",
-                  posIdx !== work.positions.length - 1 &&
-                    "border-b border-[#27272a] pb-2"
-                )}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.open(work.liveUrl, "_blank");
+                }}
+                className="cursor-pointer"
               >
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
-                  <h4 className="text-gray-200 font-medium">{position.role}</h4>
-                  <span className="text-gray-400 text-sm font-medium">
-                    {position.timeLine}
-                  </span>
-                </div>
-
-                <p className="text-gray-400 text-sm mb-2 whitespace-pre-line">
-                  {position.description.trim()}
-                </p>
+                <Image
+                  src={work.imageSrc}
+                  alt={work.company}
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover flex-shrink-0"
+                />
               </div>
-            ))}
 
-            {/* Tech Stack */}
-            <div className="flex flex-wrap gap-1 mb-3">
-              {getAllTechnologies(work.positions).map((tech) => (
-                <span
-                  key={tech}
-                  className="text-xs bg-neutral-800 text-gray-300 px-2 py-1 rounded"
+              {/* Company Info */}
+              <div className="flex-1">
+                <p className="text-base text-white font-medium">{work.company}</p>
+              </div>
+            </div>
+
+            {/* Role Descriptions */}
+            <div className="text-gray-400 text-sm pl-[52px] pr-4">
+              {work.positions.map((position, posIdx) => (
+                <div
+                  key={posIdx}
+                  className={cn(
+                    "mb-4",
+                    posIdx !== work.positions.length - 1 &&
+                    "border-b border-[#27272a] pb-2"
+                  )}
                 >
-                  {tech}
-                </span>
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 gap-1 sm:gap-0">
+                    <h4 className="text-gray-200 font-medium">{position.role}</h4>
+                    <span className="text-gray-400 text-sm font-medium">
+                      {position.timeLine}
+                    </span>
+                  </div>
+
+                  <p className="text-gray-400 text-sm mb-2 whitespace-pre-line">
+                    {position.description.trim()}
+                  </p>
+                </div>
               ))}
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-1 mb-3">
+                {getAllTechnologies(work.positions).map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs bg-neutral-800 text-gray-300 px-2 py-1 rounded"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </ViewArea>
   );
 };
 
