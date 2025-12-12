@@ -25,7 +25,7 @@ const ViewArea = ({
         showBorderTop && "border-t",
         showBorderBottom && "border-b",
         (showBorderTop || showBorderBottom) && "border-white/10",
-        "px-2 sm:px-0"
+        "px-4 sm:px-0"
     )
 
     const innerBorderClasses = cn(
