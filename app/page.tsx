@@ -1,4 +1,4 @@
-import Findme from "@/components/Findme";
+
 import Hero from "@/components/hero";
 import Projects from "@/components/Projects";
 import Work from "@/components/Work";

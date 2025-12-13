@@ -50,7 +50,7 @@ const Hero = () => {
                       opacity: 1,
                       scale: 1,
                       transition: {
-                        staggerChildren: 0.02,
+                        staggerChildren: 0.03,
 
                       }
                     },
@@ -61,7 +61,7 @@ const Hero = () => {
                       transition: { duration: 0.3 }
                     }
                   }}
-                  className="text-white text-sm leading-none flex border border-dashed px-2 py-1 border-neutral-700 bg-neutral-800 rounded-md tracking-wide "
+                  className="text-text-secondary text-base font-medium leading-none flex  tracking-wide "
                 >
                   {roles[currentRoleIndex].split("").map((char, index) => (
                     <motion.span
@@ -81,11 +81,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col  pt-6">
           <p className="text-text-secondary text-base/7 tracking-wide max-w-xl">
-            I write code, but I think in pixels. Bridging the gap between
-            <span className="text-white">{" "}it works{" "}</span>
-            and
-            <span className="text-white">{" "}it feels right.{" "}</span>
-            I just love building software that people actually enjoy using.
+            I write code, but I <span className="text-white">think in pixels</span>. I’m obsessed with the tiny details that turn a functional app into an <span className="text-white">experience people love</span>.
           </p>
 
 
@@ -108,29 +104,29 @@ const Hero = () => {
         <div className="flex flex-row gap-2 pt-9">
           <SocialLink
             href="https://x.com/AmarnathDhumal"
-            icon={<IconBrandX size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-700 " />}
+            icon={<IconBrandX size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
             label="Twitter"
             newTab
           />
           <SocialLink
             href="tel:+918367260182"
-            icon={<IconPhone size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-700 " />}
+            icon={<IconPhone size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
             label="Call"
           />
           <SocialLink
             href="mailto:amarnathdhumal2001@gmail.com"
-            icon={<IconMail size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-700 " />}
+            icon={<IconMail size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
             label="Mail"
           />
           <SocialLink
             href="https://github.com/amarnath666"
-            icon={<IconBrandGithub size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-700 " />}
+            icon={<IconBrandGithub size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
             label="GitHub"
             newTab
           />
           <SocialLink
             href="https://linkedin.com/in/amarnath-dhumal"
-            icon={<IconBrandLinkedin size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-700 " />}
+            icon={<IconBrandLinkedin size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
             label="LinkedIn"
             newTab
           />
