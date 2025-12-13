@@ -8,18 +8,11 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <ViewArea showBottomDots={false}>
+    <ViewArea showBorderTop={false} showTopDots={false} showBottomDots={false}>
       <div className="flex flex-col items-start justify-center gap-6 ">
         <div className="flex flex-row  items-center ">
-          <Image
-            src="/images/profile.jpg"
-            alt="profile"
-            width={80}
-            height={80}
-            className="rounded-full"
-            priority
-          />
-          <div className="pl-4 ">
+
+          <div >
             <p className="text-[26px] font-bold font-doto text-[#fafafa]">
               Amarnath Dhumal
             </p>
@@ -36,7 +29,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="flex flex-row  gap-4 ">
+        <div className="flex flex-col sm:flex-row  gap-4 ">
           <PingButton
             icon={<IconBrandX size={18} />}
             name="Open for Work"

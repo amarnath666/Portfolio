@@ -24,14 +24,14 @@ const ViewArea = ({
     const outerBorderClasses = cn(
         showBorderTop && "border-t",
         showBorderBottom && "border-b",
-        (showBorderTop || showBorderBottom) && "border-white/10",
+        (showBorderTop || showBorderBottom) && "border-neutral-900",
         "px-4 sm:px-0"
     )
 
     const innerBorderClasses = cn(
         showBorderLeft && "border-l",
         showBorderRight && "border-r",
-        (showBorderLeft || showBorderRight) && "border-white/10"
+        (showBorderLeft || showBorderRight) && "border-neutral-900"
     )
 
     return (
