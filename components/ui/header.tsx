@@ -1,5 +1,6 @@
 import ViewArea from "./view-area"
 import Image from "next/image"
+import Link from "next/link"
 const Header = () => {
     return (
         <div className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm pt-[10px]">
@@ -17,12 +18,14 @@ const Header = () => {
                         />
                     </div>
                     <div className="flex flex-row gap-4">
-                        <p className="text-base/7 text-white">
+
+                        <Link href="#projects" className="text-base/7 text-white">
+
                             Projects
-                        </p>
-                        <p className="text-base/7 text-white">
+                        </Link>
+                        <Link href="mailto:amarnathdhumal2001@gmail.com" className="text-base/7 text-white">
                             Contact
-                        </p>
+                        </Link>
                     </div>
                 </div>
             </ViewArea>

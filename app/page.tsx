@@ -6,14 +6,16 @@ import Header from "@/components/ui/header";
 export default function Home() {
   return (
     <div className="bg-black">
-      <div className="w-full pt-[82px] pb-[10px]">
+      <div className="w-full pt-[66px] pb-[10px]">
         <Header />
 
 
         <Hero />
         <Findme />
         <Work />
-        <Projects />
+        <div id="projects">
+          <Projects />
+        </div>
       </div>
     </div>
   );
