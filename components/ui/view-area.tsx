@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 interface ViewAreaProps {
     children: React.ReactNode
     className?: string
+    outerClassName?: string
     showBorderTop?: boolean
     showBorderBottom?: boolean
     showBorderLeft?: boolean
@@ -14,6 +15,7 @@ interface ViewAreaProps {
 const ViewArea = ({
     children,
     className,
+    outerClassName,
     showBorderTop = true,
     showBorderBottom = true,
     showBorderLeft = true,
@@ -22,16 +24,17 @@ const ViewArea = ({
     showBottomDots = true
 }: ViewAreaProps) => {
     const outerBorderClasses = cn(
-        showBorderTop && "border-t",
-        showBorderBottom && "border-b",
-        (showBorderTop || showBorderBottom) && "border-neutral-900",
-        "px-4 sm:px-0"
+        showBorderTop && "border-t-1",
+        showBorderBottom && "border-b-1",
+        (showBorderTop || showBorderBottom) && "border-neutral-800/60",
+        "px-4 sm:px-0",
+        outerClassName
     )
 
     const innerBorderClasses = cn(
-        showBorderLeft && "border-l",
-        showBorderRight && "border-r",
-        (showBorderLeft || showBorderRight) && "border-neutral-900"
+        showBorderLeft && "border-l-1",
+        showBorderRight && "border-r-1",
+        (showBorderLeft || showBorderRight) && "border-neutral-800/60"
     )
 
     return (

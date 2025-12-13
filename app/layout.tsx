@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Doto } from "next/font/google";
+import { Geist, Geist_Mono, Doto, Outfit, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 // import { ThemeProvider } from "@/lib/theme-provider";
@@ -19,6 +19,19 @@ const geistMono = Geist_Mono({
 const doto = Doto({
   variable: "--font-doto",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -64,7 +77,7 @@ export default function RootLayout({
         <link rel="prefetch" as="image" href="/images/profile.jpg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
       >
         {/* <ThemeProvider
           attribute="class"

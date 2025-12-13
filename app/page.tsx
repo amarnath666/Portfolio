@@ -11,7 +11,7 @@ export default function Home() {
 
 
         <Hero />
-        <Findme />
+        {/* <Findme /> */}
         <Work />
         <div id="projects">
           <Projects />
