@@ -41,7 +41,7 @@ const ViewArea = ({
         <div className={outerBorderClasses}>
             <div className={cn(
                 innerBorderClasses,
-                "w-full h-auto relative p-4 max-w-3xl mx-auto ",
+                "w-full h-auto relative px-4 py-6 max-w-3xl mx-auto ",
                 className
             )}>
                 <Dots
@@ -71,7 +71,7 @@ export const Dots = ({
     showBottomRight = true
 }: DotsProps) => {
     return (
-        <div className="z-10">
+        <div className="absolute inset-0 z-20 pointer-events-none">
             {showTopLeft && (
                 <div className="absolute top-[-4px] left-[-4px] w-2 h-2 bg-neutral-700 rounded-full" />
             )}

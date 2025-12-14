@@ -50,7 +50,7 @@ const Header = () => {
                                 {hovered === item.name && (
                                     <motion.span
                                         layoutId="nav-item-hover"
-                                        className="absolute inset-0 bg-neutral-900 rounded-md -z-10"
+                                        className="absolute inset-0 bg-neutral-800 rounded-md -z-10"
                                         transition={{
                                             type: "spring",
                                             stiffness: 350,

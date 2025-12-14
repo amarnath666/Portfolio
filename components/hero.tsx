@@ -22,7 +22,7 @@ const Hero = () => {
 
   return (
     <ViewArea showBorderTop={false} showTopDots={false} showBottomDots={false}>
-      <div className="flex flex-col items-start justify-center py-8">
+      <div className="flex flex-col items-start justify-center py-6">
         <div className="flex flex-row  items-center w-full">
 
           <div className="flex flex-col items-start gap-2 w-full">
@@ -80,7 +80,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex flex-col  pt-6">
-          <p className="text-text-secondary text-base/7 tracking-wide max-w-xl">
+          <p className="text-text-secondary text-base/7 tracking-wide max-w-[512px]">
             I write code, but I <span className="text-white">think in pixels</span>. I’m obsessed with the tiny details that turn a functional app into an <span className="text-white">experience people love</span>.
           </p>
 
@@ -101,7 +101,7 @@ const Hero = () => {
 
 
         {/* Social Icons */}
-        <div className="flex flex-row gap-2 pt-9">
+        <div className="flex flex-row gap-2 pt-6">
           <SocialLink
             href="https://x.com/AmarnathDhumal"
             icon={<IconBrandX size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
