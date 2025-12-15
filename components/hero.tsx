@@ -8,7 +8,7 @@ import { IconBrandLinkedin, IconBrandX, IconBrandGithub, IconPhone, IconMail } f
 import SocialLink from "./social-link";
 import { cn } from "@/lib/utils";
 
-const socialIconClassName = "border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 rounded-md text-neutral-400 dark:text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors";
+const socialIconClassName = "border border-dashed border-neutral-400 dark:border-neutral-700 bg-gray-200 dark:bg-neutral-800 rounded-md text-neutral-400 dark:text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors";
 
 const roles = ["Design Engineer", "Full Stack Developer", "App Developer"]
 

@@ -3,12 +3,9 @@
 import ViewArea from "./view-area"
 import Image from "next/image"
 import Link from "next/link"
-import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect } from "react";
-import { IconBrightnessUp, IconMoon } from "@tabler/icons-react";
-import { Tooltip, TooltipTrigger, TooltipContent } from "./tooltip";
-import { useTheme } from "next-themes";
-import useSound from "use-sound";
+import { motion } from "motion/react";
+import { useState } from "react";
+import ThemeToggle from "./theme-toggle";
 
 interface NavItem {
     name: string;
@@ -18,19 +15,10 @@ interface NavItem {
 const navItems: NavItem[] = [
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
-]
-
-
+];
 
 const Header = () => {
     const [hovered, setHovered] = useState<string | null>(null);
-    const { theme, setTheme, resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-    const [play] = useSound("/sounds/theme.wav"); // Added this line
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black pt-[10px]">
@@ -61,7 +49,7 @@ const Header = () => {
                                 {hovered === item.name && (
                                     <motion.span
                                         layoutId="nav-item-hover"
-                                        className="absolute inset-0 dark:bg-neutral-800 bg-neutral-100 rounded-md -z-10"
+                                        className="absolute inset-0 dark:bg-neutral-800 bg-neutral-200 rounded-md -z-10"
                                         transition={{
                                             type: "spring",
                                             stiffness: 350,
@@ -72,43 +60,7 @@ const Header = () => {
                                 {item.name}
                             </Link>
                         ))}
-                        <Tooltip>
-                            <TooltipTrigger asChild>
-                                <button
-                                    onMouseEnter={() => setHovered(null)}
-                                    className="hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md w-8 h-8 flex items-center justify-center cursor-pointer transition-colors"
-                                    onClick={() => {
-                                        setTheme(resolvedTheme === "dark" ? "light" : "dark");
-                                        play();
-                                    }}>
-                                    <AnimatePresence mode="wait" initial={false}>
-                                        {mounted && (resolvedTheme === "dark" ?
-                                            <motion.div
-                                                key="dark"
-                                                initial={{ rotate: -90, scale: 0 }}
-                                                animate={{ rotate: 0, scale: 1 }}
-                                                exit={{ rotate: 90, scale: 0 }}
-                                                transition={{ duration: 0.2 }}
-                                            >
-                                                <IconMoon size={16} className="text-black dark:text-white" />
-                                            </motion.div>
-                                            :
-                                            <motion.div
-                                                key="light"
-                                                initial={{ rotate: -90, scale: 0 }}
-                                                animate={{ rotate: 0, scale: 1 }}
-                                                exit={{ rotate: 90, scale: 0 }}
-                                                transition={{ duration: 0.2 }}
-                                            >
-                                                <IconBrightnessUp size={16} className="text-black dark:text-white" />
-                                            </motion.div>)}
-                                    </AnimatePresence>
-                                </button>
-                            </TooltipTrigger >
-                            <TooltipContent side="bottom" sideOffset={5}>
-                                Toggle Mode
-                            </TooltipContent>
-                        </Tooltip >
+                        <ThemeToggle onMouseEnter={() => setHovered(null)} />
                     </div >
                 </div >
             </ViewArea >
