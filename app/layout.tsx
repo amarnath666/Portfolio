@@ -1,37 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Doto, Outfit, Instrument_Serif } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 // import { ThemeProvider } from "@/lib/theme-provider";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const doto = Doto({
-  variable: "--font-doto",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: "400",
   display: "swap",
 });
 
@@ -77,7 +51,7 @@ export default function RootLayout({
         <link rel="prefetch" as="image" href="/images/profile.jpg" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${doto.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
+        className={` ${outfit.variable}  antialiased`}
       >
         {/* <ThemeProvider
           attribute="class"

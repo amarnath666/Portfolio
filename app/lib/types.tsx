@@ -7,7 +7,7 @@ export interface ButtonProps {
 
 export interface IconButtonProps {
   name: string;
-   icon?: React.ReactNode;
+  icon?: React.ReactNode;
   onClick: (e?: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -17,6 +17,6 @@ export interface ProjectCardProps {
   videoSrc: string;
   imageSrc: string;
   liveUrl: string;
-  githubUrl: string;
+  githubUrl?: string;
   technologies: string[];
 }

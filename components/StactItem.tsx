@@ -10,7 +10,7 @@ const StackItem = ({ technology }: { technology: string }) => {
       whileTap="animate"
       initial="initial"
       className={cn(
-        "flex items-start justify-start rounded-full border border-neutral-700 p-1 text-xs bg-zinc-900 text-white"
+        "flex items-center justify-start rounded-full border border-neutral-800 p-1 text-xs leading-none bg-neutral-950 text-white"
       )}
     >
       <motion.span
@@ -20,7 +20,7 @@ const StackItem = ({ technology }: { technology: string }) => {
         transition={{
           type: "spring",
         }}
-        
+
       >
         {getLogoForTechnology(technology)}
       </motion.span>
@@ -36,7 +36,7 @@ const StackItem = ({ technology }: { technology: string }) => {
           damping: 20,
           mass: 0.5,
         }}
-        className="overflow-hidden whitespace-nowrap text-white "
+        className="overflow-hidden whitespace-nowrap text-white tracking-wide"
       >
         {technology}
       </motion.span>

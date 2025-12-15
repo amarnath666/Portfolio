@@ -22,8 +22,8 @@ const Header = () => {
     const [hovered, setHovered] = useState<string | null>(null);
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm pt-[10px]">
-            <ViewArea className="px-4 py-2">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-black pt-[10px]">
+            <ViewArea className="px-4 py-2 md:py-2">
                 <div className="flex flex-row items-center justify-between">
                     <div>
 

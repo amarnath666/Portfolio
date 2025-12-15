@@ -15,6 +15,7 @@ export default function Home() {
 
         <Divider />
         <Work />
+        <Divider />
         <div id="projects">
           <Projects />
         </div>

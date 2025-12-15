@@ -27,7 +27,7 @@ const ViewArea = ({
         showBorderTop && "border-t-1",
         showBorderBottom && "border-b-1",
         (showBorderTop || showBorderBottom) && "border-neutral-800/60",
-        "px-4 sm:px-0",
+        "px-2 sm:px-0",
         outerClassName
     )
 
@@ -41,7 +41,7 @@ const ViewArea = ({
         <div className={outerBorderClasses}>
             <div className={cn(
                 innerBorderClasses,
-                "w-full h-auto relative px-4 py-6 max-w-3xl mx-auto ",
+                "w-full h-auto relative px-4 py-8 md:py-12 max-w-3xl mx-auto ",
                 className
             )}>
                 <Dots
