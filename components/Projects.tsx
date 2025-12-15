@@ -39,7 +39,7 @@ const projectData: Project[] = [
     videoSrc: "/videos/YTNotes.mp4",
     imageSrc: "/images/yt.png",
     liveUrl: "https://www.ytnotes.online",
-    githubUrl: "https://github.com/amarnath666/youtube_ai_agent",
+    githubUrl: "https://github.com/amarnath666/YTNotes",
     technologies: ["Next.js", "TypeScript", "LangChain", "MongoDB", "Razorpay", "Tailwind CSS"],
   },
   {
