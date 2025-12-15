@@ -73,6 +73,7 @@ const Header = () => {
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <button
+                                    onMouseEnter={() => setHovered(null)}
                                     className="hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md w-8 h-8 flex items-center justify-center cursor-pointer transition-colors"
                                     onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
                                     <AnimatePresence mode="wait" initial={false}>
