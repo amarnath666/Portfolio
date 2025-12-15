@@ -167,7 +167,7 @@ const Work = () => {
 
                       </div>
 
-                      <ul className="list-disc pl-4 space-y-2 marker:text-neutral-700">
+                      <ul className="list-disc pl-4 space-y-2  marker:text-neutral-400 dark:marker:text-neutral-700">
                         {position.description.trim().split('\n').filter(line => line.trim()).map((line, i) => (
                           <li key={i} className="text-text-secondary text-sm/5 tracking-wide max-w-[512px]">
                             {line.trim()}
