@@ -2,6 +2,8 @@
   "name": "portfolio_new",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "author": "Amarnath Dhumal",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
