@@ -186,7 +186,7 @@ const Work = () => {
                 {work.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary px-2 py-1 text-xs md:text-sm leading-none"
+                    className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-white px-2 py-1 tracking-wide text-xs leading-none"
                   >
                     {tech}
                   </span>
