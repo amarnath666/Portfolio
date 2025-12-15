@@ -26,7 +26,7 @@ const ViewArea = ({
     const outerBorderClasses = cn(
         showBorderTop && "border-t-1",
         showBorderBottom && "border-b-1",
-        (showBorderTop || showBorderBottom) && "border-neutral-800/60",
+        (showBorderTop || showBorderBottom) && "border-neutral-200 dark:border-neutral-800/60",
         "px-4 sm:px-0",
         outerClassName
     )
@@ -34,7 +34,7 @@ const ViewArea = ({
     const innerBorderClasses = cn(
         showBorderLeft && "border-l-1",
         showBorderRight && "border-r-1",
-        (showBorderLeft || showBorderRight) && "border-neutral-800/60"
+        (showBorderLeft || showBorderRight) && "border-neutral-200 dark:border-neutral-800/60"
     )
 
     return (
@@ -73,16 +73,16 @@ export const Dots = ({
     return (
         <div className="absolute inset-0 z-20 pointer-events-none">
             {showTopLeft && (
-                <div className="absolute top-[-4px] left-[-4px] w-2 h-2 bg-neutral-700 rounded-full" />
+                <div className="absolute top-[-4px] left-[-4px] w-2 h-2 dark:bg-neutral-800 bg-neutral-200 rounded-full" />
             )}
             {showBottomLeft && (
-                <div className="absolute bottom-[-4px] left-[-4px] w-2 h-2 bg-neutral-700 rounded-full" />
+                <div className="absolute bottom-[-4px] left-[-4px] w-2 h-2 dark:bg-neutral-800 bg-neutral-200 rounded-full" />
             )}
             {showTopRight && (
-                <div className="absolute top-[-4px] right-[-4px] w-2 h-2 bg-neutral-700 rounded-full" />
+                <div className="absolute top-[-4px] right-[-4px] w-2 h-2 dark:bg-neutral-800 bg-neutral-200 rounded-full" />
             )}
             {showBottomRight && (
-                <div className="absolute bottom-[-4px] right-[-4px] w-2 h-2 bg-neutral-700 rounded-full" />
+                <div className="absolute bottom-[-4px] right-[-4px] w-2 h-2 dark:bg-neutral-800 bg-neutral-200 rounded-full" />
             )}
         </div>
     )

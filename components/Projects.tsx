@@ -40,7 +40,7 @@ const projectData: Project[] = [
     imageSrc: "/images/yt.png",
     liveUrl: "https://www.ytnotes.online",
     githubUrl: "https://github.com/amarnath666/YTNotes",
-    technologies: ["Next.js", "TypeScript", "LangChain", "MongoDB", "Razorpay", "Tailwind CSS"],
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Razorpay", "Tailwind CSS"],
   },
   {
     title: "Sketch Sync",
@@ -60,7 +60,7 @@ const Projects = () => {
     <ViewArea showBorderTop={false}>
       <div >
 
-        <h2 className="text-white text-xl font-medium leading-none flex  tracking-wide md:pb-6 pb-4">
+        <h2 className="text-black dark:text-white text-xl font-medium leading-none flex  tracking-wide md:pb-6 pb-4">
           Projects
         </h2>
 

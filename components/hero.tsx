@@ -6,6 +6,9 @@ import { useState, useEffect } from "react";
 import { IconBrandLinkedin, IconBrandX, IconBrandGithub, IconPhone, IconMail } from "@tabler/icons-react";
 
 import SocialLink from "./social-link";
+import { cn } from "@/lib/utils";
+
+const socialIconClassName = "border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 rounded-md text-neutral-400 dark:text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors";
 
 const roles = ["Design Engineer", "Full Stack Developer", "App Developer"]
 
@@ -28,7 +31,7 @@ const Hero = () => {
           <div className="flex flex-col items-start gap-2 w-full">
             <div className="flex flex-row justify-between items-center w-full">
               <div>
-                <p className="text-[36px] font-outfit   text-white tracking-normal font-medium  leading-none ">
+                <p className="text-[36px] font-outfit   text-foreground tracking-normal font-medium  leading-none ">
                   Amarnath Dhumal
                 </p>
               </div>
@@ -81,7 +84,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col pt-6">
           <p className="text-text-secondary text-base/7 tracking-wide max-w-[512px]">
-            I write code, but I <span className="text-white">think in pixels</span>. I’m obsessed with the tiny details that turn a functional app into an <span className="text-white">experience people love</span>.
+            I write code, but I <span className="text-foreground">think in pixels</span>. I’m obsessed with the tiny details that turn a functional app into an <span className="text-foreground">experience people love</span>.
           </p>
 
 
@@ -104,29 +107,29 @@ const Hero = () => {
         <div className="flex flex-row gap-2 pt-6">
           <SocialLink
             href="https://x.com/AmarnathDhumal"
-            icon={<IconBrandX size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
+            icon={<IconBrandX size={28} className={cn(socialIconClassName)} />}
             label="View Twitter"
             newTab
           />
           <SocialLink
             href="tel:+918367260182"
-            icon={<IconPhone size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
+            icon={<IconPhone size={28} className={cn(socialIconClassName)} />}
             label="Call me"
           />
           <SocialLink
             href="mailto:amarnathdhumal2001@gmail.com"
-            icon={<IconMail size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
+            icon={<IconMail size={28} className={cn(socialIconClassName)} />}
             label="Mail me"
           />
           <SocialLink
             href="https://github.com/amarnath666"
-            icon={<IconBrandGithub size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
+            icon={<IconBrandGithub size={28} className={cn(socialIconClassName)} />}
             label="View GitHub"
             newTab
           />
           <SocialLink
             href="https://linkedin.com/in/amarnath-dhumal"
-            icon={<IconBrandLinkedin size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
+            icon={<IconBrandLinkedin size={28} className={cn(socialIconClassName)} />}
             label="View LinkedIn"
             newTab
           />

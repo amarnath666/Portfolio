@@ -98,7 +98,7 @@ const Work = () => {
     <ViewArea showBorderTop={false} showBottomDots={false}>
       <div  >
 
-        <h2 className="text-white text-xl font-medium leading-none flex  tracking-wide pb-6">
+        <h2 className="dark:text-white text-black text-xl font-medium leading-none flex  tracking-wide pb-6">
           Experience
         </h2>
 
@@ -128,10 +128,10 @@ const Work = () => {
                 {/* Company Info */}
                 <div className="flex-1">
                   <div className="flex flex-row items-start justify-between ">
-                    <h4 className="text-base text-white font-medium leading-none pb-2 tracking-wide ">
+                    <h4 className="text-base  dark:text-white text-black font-medium leading-none pb-2 tracking-wide ">
                       {work.company}
                     </h4>
-                    <p className="text-sm text-text-secondary leading-none tracking-wide">
+                    <p className="text-sm  text-text-secondary leading-none tracking-wide">
                       {work.location}
                     </p>
                   </div>
@@ -147,7 +147,7 @@ const Work = () => {
 
                       <div className="flex flex-row items-center justify-between w-full mb-4 gap-4">
 
-                        <h4 className="text-sm text-white leading-none tracking-wide">
+                        <h4 className="text-sm text-black dark:text-white leading-none tracking-wide">
                           {position.shortRole ? (
                             <>
                               <span className="md:hidden">{position.shortRole}</span>
@@ -186,7 +186,7 @@ const Work = () => {
                 {work.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-white px-2 py-1 tracking-wide text-xs leading-none"
+                    className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 rounded-md text-black dark:text-white py-1 px-2  transition-colors text-xs"
                   >
                     {tech}
                   </span>

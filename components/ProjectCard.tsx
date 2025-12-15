@@ -28,7 +28,7 @@ const ProjectCard = ({
     <>
       <div
         onClick={() => window.open(liveUrl, "_blank")}
-        className="flex flex-col border border-neutral-800 rounded-md  cursor-pointer relative  transition-all duration-300"
+        className="flex flex-col border dark:border-neutral-800 border-neutral-200 rounded-md  cursor-pointer relative  transition-all duration-300"
       >
         {/* Image with Play Button */}
         <div className="w-full relative overflow-hidden rounded-t-sm group  aspect-video ">
@@ -80,14 +80,14 @@ const ProjectCard = ({
             <div className="flex gap-2 " onClick={(e) => e.stopPropagation()}>
               <SocialLink
                 href={liveUrl}
-                icon={<IconLink size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
+                icon={<IconLink size={28} className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 rounded-md text-neutral-400 dark:text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors " />}
                 label="View Website"
                 newTab
               />
               {githubUrl && (
                 <SocialLink
                   href={githubUrl}
-                  icon={<IconBrandGithub size={28} className="border border-dashed border-neutral-700 bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-neutral-900 " />}
+                  icon={<IconBrandGithub size={28} className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-800 rounded-md text-neutral-400 dark:text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors " />}
                   label="View GitHub"
                   newTab
                 />

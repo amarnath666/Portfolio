@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
-// import { ThemeProvider } from "@/lib/theme-provider";
+import { ThemeProvider } from "@/lib/theme-provider";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Prefetch critical images */}
         <link rel="prefetch" as="image" href="/images/profile.jpg" />
@@ -53,15 +53,15 @@ export default function RootLayout({
       <body
         className={` ${outfit.variable}  antialiased`}
       >
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
-        {children}
-        <Analytics />
-        {/* </ThemeProvider> */}
+        >
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

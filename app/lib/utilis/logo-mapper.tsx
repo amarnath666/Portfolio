@@ -2,19 +2,38 @@ import React from "react";
 import { IconCode } from "@tabler/icons-react";
 import Image from "next/image";
 
-const Logo = ({ src }: { src: string }) => {
-  return <Image src={src} alt="icon" width={16} height={16} className="w-4 h-4 rounded-full" />;
+const Logo = ({ src, darkSrc }: { src: string; darkSrc?: string }) => {
+  return (
+    <>
+      <Image
+        src={src}
+        alt="icon"
+        width={16}
+        height={16}
+        className={`w-4 h-4 rounded-full ${darkSrc ? "dark:hidden" : ""}`}
+      />
+      {darkSrc && (
+        <Image
+          src={darkSrc}
+          alt="icon"
+          width={16}
+          height={16}
+          className="w-4 h-4 rounded-full hidden dark:block"
+        />
+      )}
+    </>
+  );
 };
 
 export const getLogoForTechnology = (technology: string) => {
   const logoMap: Record<string, React.ReactNode> = {
-    "Next.js": <Logo src="/images/nextjs.png" />,
+    "Next.js": <Logo src="/images/nextjs.svg" darkSrc="/images/nextjs.png" />,
     React: <Logo src="/images/react.jpeg" />,
     TypeScript: <Logo src="/images/typescript.png" />,
     MongoDB: <Logo src="/images/mongodb.svg" />,
-    "Node.js" : <Logo src="/images/nodejs.png" />,
-    "Express.js" : <Logo src="/images/express.png" />,
-    "GraphQL" : <Logo src="/images/graphql.png" />,
+    "Node.js": <Logo src="/images/nodejs.png" />,
+    "Express.js": <Logo src="/images/express.png" />,
+    "GraphQL": <Logo src="/images/graphql.png" />,
     "LangChain": <Logo src="/images/langchain.png" />,
     "Razorpay": <Logo src="/images/razorpay.png" />,
     "Tailwind CSS": <Logo src="/images/tailwind.png" />,
