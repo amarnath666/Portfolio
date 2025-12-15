@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { IconBrightnessUp, IconMoon } from "@tabler/icons-react";
 import { Tooltip, TooltipTrigger, TooltipContent } from "./tooltip";
 import { useTheme } from "next-themes";
+import useSound from "use-sound";
 
 interface NavItem {
     name: string;
@@ -25,6 +26,7 @@ const Header = () => {
     const [hovered, setHovered] = useState<string | null>(null);
     const { theme, setTheme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
+    const [play] = useSound("/sounds/theme.wav"); // Added this line
 
     useEffect(() => {
         setMounted(true);
@@ -75,7 +77,10 @@ const Header = () => {
                                 <button
                                     onMouseEnter={() => setHovered(null)}
                                     className="hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-md w-8 h-8 flex items-center justify-center cursor-pointer transition-colors"
-                                    onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+                                    onClick={() => {
+                                        setTheme(resolvedTheme === "dark" ? "light" : "dark");
+                                        play();
+                                    }}>
                                     <AnimatePresence mode="wait" initial={false}>
                                         {mounted && (resolvedTheme === "dark" ?
                                             <motion.div
