@@ -27,7 +27,7 @@ const ViewArea = ({
         showBorderTop && "border-t-1",
         showBorderBottom && "border-b-1",
         (showBorderTop || showBorderBottom) && "border-neutral-800/60",
-        "px-2 sm:px-0",
+        "px-4 sm:px-0",
         outerClassName
     )
 
