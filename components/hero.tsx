@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="flex flex-col items-start gap-2 w-full">
             <div className="flex flex-row justify-between items-center w-full">
               <div>
-                <p className="text-[36px] font-outfit   text-foreground tracking-normal font-medium  leading-none ">
+                <p className="text-[24px] md:text-[36px] font-outfit   text-foreground tracking-normal font-medium  leading-none ">
                   Amarnath Dhumal
                 </p>
               </div>
@@ -61,7 +61,7 @@ const Hero = () => {
                       transition: { duration: 0.3 }
                     }
                   }}
-                  className="text-text-secondary text-base font-medium leading-none flex  tracking-wide "
+                  className="text-text-secondary text-sm md:text-base font-medium leading-none flex  tracking-wide "
                 >
                   {roles[currentRoleIndex].split("").map((char, index) => (
                     <motion.span
@@ -80,7 +80,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="flex flex-col pt-6">
-          <p className="text-text-secondary text-base/7 tracking-wide max-w-[512px]">
+          <p className="text-text-secondary text-sm/5 md:text-base/7 tracking-wide max-w-[512px]">
             I write code, but I <span className="text-foreground">think in pixels</span>. I’m obsessed with the tiny details that turn a functional app into an <span className="text-foreground">experience people love</span>.
           </p>
 

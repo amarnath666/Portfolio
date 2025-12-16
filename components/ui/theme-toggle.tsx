@@ -25,7 +25,7 @@ const ThemeToggle = ({ onMouseEnter }: ThemeToggleProps) => {
             <TooltipTrigger asChild>
                 <button
                     onMouseEnter={onMouseEnter}
-                    className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md p-2 flex items-center justify-center cursor-pointer transition-colors"
+                    className=" rounded-md p-2 flex items-center justify-center cursor-pointer transition-colors"
                     onClick={() => {
                         setTheme(resolvedTheme === "dark" ? "light" : "dark");
                         play();
@@ -41,7 +41,7 @@ const ThemeToggle = ({ onMouseEnter }: ThemeToggleProps) => {
                                 exit={{ rotate: 90, scale: 0 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <IconMoon size={16} className="text-black dark:text-white" />
+                                <IconMoon size={16} className="text-neutral-400 dark:text-text-secondary" />
                             </motion.div>
                             :
                             <motion.div
@@ -51,7 +51,7 @@ const ThemeToggle = ({ onMouseEnter }: ThemeToggleProps) => {
                                 exit={{ rotate: 90, scale: 0 }}
                                 transition={{ duration: 0.2 }}
                             >
-                                <IconBrightnessUp size={16} className="text-black dark:text-white" />
+                                <IconBrightnessUp size={16} className="text-neutral-400 dark:text-text-secondary" />
                             </motion.div>
                         )}
                     </AnimatePresence>

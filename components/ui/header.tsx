@@ -45,7 +45,7 @@ const Header = () => {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="relative px-2 py-1 text-base text-black dark:text-white tracking-normal transition-colors"
+                                className="relative px-2 py-1 text-sm md:text-base text-black dark:text-white tracking-normal transition-colors"
                                 onMouseEnter={() => setHovered(item.name)}
 
                             >
