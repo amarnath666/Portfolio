@@ -6,6 +6,8 @@ import Link from "next/link"
 import { motion } from "motion/react";
 import { useState } from "react";
 import ThemeToggle from "./theme-toggle";
+import { IconBrandGithub } from "@tabler/icons-react";
+import { Tooltip, TooltipTrigger, TooltipContent } from "./tooltip";
 
 interface NavItem {
     name: string;
@@ -14,7 +16,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "mailto:amarnathdhumal2001@gmail.com" },
 ];
 
 const Header = () => {
@@ -60,6 +62,21 @@ const Header = () => {
                                 {item.name}
                             </Link>
                         ))}
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Link
+                                    href="https://github.com/amarnath666/Portfolio"
+                                    target="_blank"
+                                    onMouseEnter={() => setHovered(null)}
+                                    className="hover:bg-neutral-200 dark:hover:bg-neutral-800 rounded-md p-2 flex items-center justify-center cursor-pointer transition-colors"
+                                >
+                                    <IconBrandGithub size={16} className="text-black dark:text-white" />
+                                </Link>
+                            </TooltipTrigger>
+                            <TooltipContent side="bottom" sideOffset={5}>
+                                Star on GitHub
+                            </TooltipContent>
+                        </Tooltip>
                         <ThemeToggle onMouseEnter={() => setHovered(null)} />
                     </div >
                 </div >
