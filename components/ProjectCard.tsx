@@ -80,14 +80,14 @@ const ProjectCard = ({
             <div className="flex gap-2 " onClick={(e) => e.stopPropagation()}>
               <SocialLink
                 href={liveUrl}
-                icon={<IconLink size={28} className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 rounded-md text-neutral-400 dark:text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors " />}
+                icon={<IconLink size={28} />}
                 label="View Website"
                 newTab
               />
               {githubUrl && (
                 <SocialLink
                   href={githubUrl}
-                  icon={<IconBrandGithub size={28} className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 rounded-md text-neutral-400 dark:text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors " />}
+                  icon={<IconBrandGithub size={28} />}
                   label="View GitHub"
                   newTab
                 />

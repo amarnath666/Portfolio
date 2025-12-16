@@ -6,9 +6,6 @@ import { useState, useEffect } from "react";
 import { IconBrandLinkedin, IconBrandX, IconBrandGithub, IconPhone, IconMail } from "@tabler/icons-react";
 
 import SocialLink from "./social-link";
-import { cn } from "@/lib/utils";
-
-const socialIconClassName = "border border-dashed border-neutral-400 dark:border-neutral-700 bg-gray-200 dark:bg-neutral-800 rounded-md text-text-secondary p-1 hover:bg-white dark:hover:bg-neutral-900 transition-colors";
 
 const roles = ["Design Engineer", "Full Stack Developer", "App Developer"]
 
@@ -88,6 +85,7 @@ const Hero = () => {
           </p>
 
 
+
         </div>
         {/* <div className="flex flex-col sm:flex-row  gap-4 pt-6">
           <Link href="mailto:amarnathdhumal2001@gmail.com">
@@ -107,29 +105,29 @@ const Hero = () => {
         <div className="flex flex-row gap-2 pt-6">
           <SocialLink
             href="https://x.com/AmarnathDhumal"
-            icon={<IconBrandX size={28} className={cn(socialIconClassName)} />}
+            icon={<IconBrandX size={28} />}
             label="View Twitter"
             newTab
           />
           <SocialLink
             href="tel:+918367260182"
-            icon={<IconPhone size={28} className={cn(socialIconClassName)} />}
+            icon={<IconPhone size={28} />}
             label="Call me"
           />
           <SocialLink
             href="mailto:amarnathdhumal2001@gmail.com"
-            icon={<IconMail size={28} className={cn(socialIconClassName)} />}
+            icon={<IconMail size={28} />}
             label="Mail me"
           />
           <SocialLink
             href="https://github.com/amarnath666"
-            icon={<IconBrandGithub size={28} className={cn(socialIconClassName)} />}
+            icon={<IconBrandGithub size={28} />}
             label="View GitHub"
             newTab
           />
           <SocialLink
             href="https://linkedin.com/in/amarnath-dhumal"
-            icon={<IconBrandLinkedin size={28} className={cn(socialIconClassName)} />}
+            icon={<IconBrandLinkedin size={28} />}
             label="View LinkedIn"
             newTab
           />
