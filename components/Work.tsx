@@ -98,7 +98,7 @@ const Work = () => {
     <ViewArea showBorderTop={false} showBottomDots={false}>
       <div  >
 
-        <h2 className="dark:text-white text-black text-xl font-medium leading-none flex  tracking-wide pb-6">
+        <h2 className="dark:text-white text-black text-[20px] md:text-[22px] font-medium leading-none flex  tracking-wide pb-6">
           Experience
         </h2>
 

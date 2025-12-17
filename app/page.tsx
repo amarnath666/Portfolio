@@ -19,7 +19,6 @@ export default function Home() {
         <div id="projects">
           <Projects />
         </div>
-
       </div>
     </div>
   );
