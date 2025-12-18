@@ -1,7 +1,7 @@
 "use client"
 
 import { GalleryCardProps } from "@/app/lib/types";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const GalleryCard = ({
     title,
@@ -10,6 +10,17 @@ const GalleryCard = ({
 
 }: GalleryCardProps) => {
     const [isLoading, setIsLoading] = useState(true);
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    const handleVideoLoad = () => {
+        setIsLoading(false);
+    };
+
+    useEffect(() => {
+        if (videoRef.current && videoRef.current.readyState >= 3) {
+            setIsLoading(false);
+        }
+    }, []);
 
     return (
         <div className="flex flex-col">
@@ -22,13 +33,16 @@ const GalleryCard = ({
                 )}
 
                 <video
+                    ref={videoRef}
                     src={videoSrc}
                     autoPlay
                     muted
                     loop
                     playsInline
+                    preload="auto"
                     className={`w-full h-full object-cover transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-                    onLoadedData={() => setIsLoading(false)}
+                    onLoadedData={handleVideoLoad}
+                    onCanPlay={handleVideoLoad}
                 />
             </div>
 
