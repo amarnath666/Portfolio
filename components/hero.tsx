@@ -1,25 +1,13 @@
 "use client";
 
 import ViewArea from "@/components/ui/view-area";
-import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect } from "react";
 import { IconBrandLinkedin, IconBrandX, IconBrandGithub, IconPhone, IconMail } from "@tabler/icons-react";
-
 import SocialLink from "./social-link";
+import AnimatedCyclingText from "./ui/animated-cycling-text";
 
 const roles = ["Design Engineer", "Full Stack Developer", "App Developer"]
 
 const Hero = () => {
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <ViewArea showBorderTop={false} showTopDots={false} showBottomDots={false}>
       <div className="flex flex-col items-start justify-center">
@@ -28,55 +16,15 @@ const Hero = () => {
           <div className="flex flex-col items-start gap-2 w-full">
             <div className="flex flex-row justify-between items-center w-full">
               <div>
-                <p className="text-[24px] md:text-[36px] font-outfit   text-foreground tracking-normal font-medium  leading-none ">
+                <h1 className="text-[24px] md:text-[36px] font-outfit   text-foreground tracking-normal font-medium  leading-none ">
                   Amarnath Dhumal
-                </p>
+                </h1>
               </div>
 
 
             </div>
 
-            <div className="flex items-center justify-center ">
-              <AnimatePresence mode="popLayout">
-                <motion.p
-                  layout
-                  key={currentRoleIndex}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  variants={{
-                    hidden: { opacity: 0, scale: 0.9 },
-                    visible: {
-                      opacity: 1,
-                      scale: 1,
-                      transition: {
-                        staggerChildren: 0.03,
-
-                      }
-                    },
-                    exit: {
-                      opacity: 0,
-                      x: -10,
-                      filter: "blur(30px)",
-                      transition: { duration: 0.3 }
-                    }
-                  }}
-                  className="text-text-secondary text-sm md:text-base font-medium leading-none flex  tracking-wide "
-                >
-                  {roles[currentRoleIndex].split("").map((char, index) => (
-                    <motion.span
-                      key={index}
-                      variants={{
-                        hidden: { opacity: 0, x: 10, filter: "blur(30px)" },
-                        visible: { opacity: 1, x: 0, filter: "blur(0px)" }
-                      }}
-                    >
-                      {char === " " ? "\u00A0" : char}
-                    </motion.span>
-                  ))}
-                </motion.p>
-              </AnimatePresence>
-            </div>
+            <AnimatedCyclingText texts={roles} />
           </div>
         </div>
         <div className="flex flex-col pt-6">

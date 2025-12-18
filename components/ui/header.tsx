@@ -6,6 +6,7 @@ import Link from "next/link"
 import { motion } from "motion/react";
 import { useState } from "react";
 import ThemeToggle from "./theme-toggle";
+import { useRouter } from "next/navigation";
 
 interface NavItem {
     name: string;
@@ -13,26 +14,27 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { name: "Projects", href: "#projects" },
     { name: "Gallery", href: "/gallery" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "mailto:amarnathdhumal2001@gmail.com" },
 ];
 
 const Header = () => {
     const [hovered, setHovered] = useState<string | null>(null);
+    const router = useRouter();
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black pt-[10px]">
             <ViewArea className="px-4 py-2 md:py-2">
                 <div className="flex flex-row items-center justify-between">
-                    <div>
+                    <div onClick={() => router.push("/")}>
 
                         <Image
                             src="/images/profile.jpg"
                             alt="profile"
                             width={40}
                             height={40}
-                            className="rounded-full"
+                            className="rounded-full cursor-pointer"
                             priority
                         />
                     </div>
@@ -43,7 +45,7 @@ const Header = () => {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="relative px-2 py-1 text-sm md:text-base text-black dark:text-white tracking-normal transition-colors"
+                                className="relative flex items-center px-2 py-1 text-sm md:text-base text-black dark:text-white tracking-normal transition-colors"
                                 onMouseEnter={() => setHovered(item.name)}
 
                             >
