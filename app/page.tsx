@@ -4,6 +4,7 @@ import Projects from "@/components/Projects";
 import Work from "@/components/Work";
 import Header from "@/components/ui/header";
 import Divider from "@/components/ui/divider";
+import Gallery from "@/components/gallery";
 export default function Home() {
   return (
     <div className="bg-white dark:bg-black overflow-x-hidden">
@@ -18,6 +19,10 @@ export default function Home() {
         <Divider />
         <div id="projects">
           <Projects />
+        </div>
+        <Divider />
+        <div id="gallery">
+          <Gallery />
         </div>
       </div>
     </div>

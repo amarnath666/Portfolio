@@ -6,9 +6,6 @@ import Link from "next/link"
 import { motion } from "motion/react";
 import { useState } from "react";
 import ThemeToggle from "./theme-toggle";
-import { IconBrandGithub, IconBrightnessUp, IconMoon } from "@tabler/icons-react";
-import { Tooltip, TooltipTrigger, TooltipContent } from "./tooltip";
-import SocialLink from "../social-link";
 
 interface NavItem {
     name: string;
@@ -17,6 +14,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
     { name: "Projects", href: "#projects" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "mailto:amarnathdhumal2001@gmail.com" },
 ];
 

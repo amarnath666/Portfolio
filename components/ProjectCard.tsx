@@ -40,7 +40,7 @@ const ProjectCard = ({
           />
 
           {/* Play Button Overlay */}
-          <div
+          {/* <div
             className="absolute inset-0 flex items-center justify-center  transition-all duration-300 cursor-pointer opacity-0 "
           >
             <div className=" rounded-full  flex items-center justify-center transition-all duration-300 ">
@@ -52,7 +52,7 @@ const ProjectCard = ({
                 className="object-contain"
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Content */}

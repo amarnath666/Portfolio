@@ -20,3 +20,10 @@ export interface ProjectCardProps {
   githubUrl?: string;
   technologies: string[];
 }
+
+export interface GalleryCardProps {
+  title: string;
+  videoSrc: string;
+  liveUrl: string;
+  isHomePage?: boolean;
+}
