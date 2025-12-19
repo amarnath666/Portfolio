@@ -2,7 +2,6 @@
 import Hero from "@/components/hero";
 import Projects from "@/components/Projects";
 import Work from "@/components/Work";
-import Header from "@/components/ui/header";
 import Divider from "@/components/ui/divider";
 import GalleryComponent from "@/components/gallery-component";
 export default function Home() {

@@ -4,7 +4,6 @@ import { GalleryCardProps } from "@/app/lib/types";
 import { useState, useRef, useEffect } from "react";
 
 const GalleryCard = ({
-    title,
     videoSrc,
     liveUrl,
 
