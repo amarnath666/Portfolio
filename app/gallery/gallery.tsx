@@ -22,7 +22,7 @@ const Gallery = () => {
                     <AnimatedCyclingText texts={descriptions} />
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-2 md:gap-4 gap-2 pt-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4  pt-6">
                     {galleryData.map((item, idx) => (
                         <GalleryCard key={idx} {...item} />
                     ))}

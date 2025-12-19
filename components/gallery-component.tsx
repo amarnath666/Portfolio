@@ -12,7 +12,7 @@ const GalleryComponent = () => {
                     Gallery
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-2 md:gap-4 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
                     {galleryData.filter(item => item.isHomePage).map((item, idx) => (
                         <GalleryCard key={idx} {...item} />
                     ))}
