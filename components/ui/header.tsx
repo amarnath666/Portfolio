@@ -11,11 +11,16 @@ import { useRouter } from "next/navigation";
 interface NavItem {
     name: string;
     href: string;
+    className?: string;
 }
 
 const navItems: NavItem[] = [
     { name: "Gallery", href: "/gallery" },
-    { name: "Projects", href: "#projects" },
+    {
+        name: "Projects",
+        href: "#projects",
+        className: "hidden md:flex"
+    },
     { name: "Contact", href: "mailto:amarnathdhumal2001@gmail.com" },
 ];
 
@@ -45,7 +50,7 @@ const Header = () => {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="relative flex items-center px-2 py-1 text-sm md:text-base text-black dark:text-white tracking-normal transition-colors"
+                                className={`relative flex items-center px-2 py-1 text-sm md:text-base text-black dark:text-white tracking-normal transition-colors ${item.className || ""}`}
                                 onMouseEnter={() => setHovered(item.name)}
 
                             >
