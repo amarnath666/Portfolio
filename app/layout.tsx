@@ -52,17 +52,13 @@ export default function RootLayout({
         <link rel="prefetch" as="image" href="/images/profile.jpg" />
       </head>
       <body
-        className={` ${outfit.variable}  antialiased`}
+        className={` ${outfit.variable}  antialiased bg-white dark:bg-black`}
       >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
-          value={{
-            light: "light",
-            dark: "dark",
-          }}
         >
           <Header />
           {children}
