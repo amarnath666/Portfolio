@@ -11,13 +11,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Amarnath Dhumal",
+  title: "Amarnath Dhumal - Desgin Engineer",
   description:
-    "Amarnath Dhumal is a full stack developer building SaaS products and web apps.",
+    "Amarnath Dhumal is a Desgin Engineer building SaaS products and web apps.",
   openGraph: {
     title: "Amarnath Dhumal",
     description:
-      "Amarnath Dhumal is a full stack developer building SaaS products and web apps.",
+      "Amarnath Dhumal is a Desgin Engineer building SaaS products and web apps.",
     url: "https://www.amarn.me", // Replace with your actual URL
     siteName: "Amarnath Dhumal",
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Amarnath Dhumal",
     description:
-      "Amarnath Dhumal is a full stack developer building SaaS products and web apps.",
+      "Amarnath Dhumal is a Desgin Engineer building SaaS products and web apps.",
     images: ["/images/og.png"],
   },
 };
@@ -59,6 +59,10 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
+          value={{
+            light: "light",
+            dark: "dark",
+          }}
         >
           <Header />
           {children}
