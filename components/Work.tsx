@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import ViewArea from "./ui/view-area";
@@ -93,12 +95,22 @@ Developed and integrated backend APIs to fetch and display dynamic data, ensurin
 ];
 
 const Work = () => {
+  const [expandedPositions, setExpandedPositions] = useState<Record<string, boolean>>({
+    "Rentkar-0": false,
+  });
+
+  const toggleExpand = (id: string) => {
+    setExpandedPositions((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+  };
 
   return (
     <ViewArea showBorderTop={false} showBottomDots={false}>
-      <div  >
+      <div>
 
-        <h2 className="dark:text-white text-black text-[20px] md:text-[22px] font-medium leading-none flex  tracking-normal pb-6">
+        <h2 className="dark:text-white text-black text-[20px] md:text-[24px] font-medium leading-none flex  tracking-normal pb-6">
           Experience
         </h2>
 
@@ -135,63 +147,136 @@ const Work = () => {
                       {work.location}
                     </p>
                   </div>
-                  {work.positions.map((position, posIdx) => (
-                    <div
-                      key={posIdx}
-                      className={cn(
-                        "flex flex-col w-full",
-                        posIdx !== work.positions.length - 1 &&
-                        " pb-6"
-                      )}
-                    >
+                  {work.positions.map((position, posIdx) => {
+                    const id = `${work.company}-${posIdx}`;
+                    const isRentkar = work.company.toLowerCase() === "rentkar";
+                    const isExpanded = expandedPositions[id] !== false;
 
-                      <div className="flex flex-row items-center justify-between w-full mb-4 gap-4">
+                    return (
+                      <div
+                        key={posIdx}
+                        className={cn(
+                          "flex flex-col w-full",
+                          posIdx !== work.positions.length - 1 &&
+                          " pb-6"
+                        )}
+                      >
 
-                        <h4 className="text-sm text-black dark:text-white leading-none tracking-wide">
-                          {position.shortRole ? (
-                            <>
-                              <span className="md:hidden">{position.shortRole}</span>
-                              <span className="hidden md:inline">{position.role}</span>
-                            </>
-                          ) : (
-                            position.role
-                          )}
-                        </h4>
+                        <div className="flex flex-row items-center justify-between w-full  gap-4">
+
+                          <h4 className="text-sm text-black dark:text-white leading-none tracking-wide flex items-center gap-2">
+                            {position.shortRole ? (
+                              <>
+                                <span className="md:hidden">{position.shortRole}</span>
+                                <span className="hidden md:inline">{position.role}</span>
+                              </>
+                            ) : (
+                              position.role
+                            )}
+                            {isRentkar && (
+                              <motion.button
+
+                                onClick={() => toggleExpand(id)}
+                                className="p-1 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-400 dark:text-neutral-600 hover:text-black dark:hover:text-white"
+                              >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <motion.path
+                                    initial={false}
+                                    animate={{ d: isExpanded ? "M7 20L12 15L17 20" : "M7 15L12 20L17 15" }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                  />
+                                  <motion.path
+                                    initial={false}
+                                    animate={{ d: isExpanded ? "M7 4L12 9L17 4" : "M7 9L12 4L17 9" }}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                  />
+                                </svg>
+                              </motion.button>
+                            )}
+                          </h4>
 
 
 
-                        <h4 className="text-sm text-text-secondary leading-none tracking-wide">
-                          {position.timeLine}
-                        </h4>
+                          <h4 className="text-sm text-text-secondary leading-none tracking-wide">
+                            {position.timeLine}
+                          </h4>
 
 
+                        </div>
+
+                        {isRentkar ? (
+                          <AnimatePresence initial={false}>
+                            {isExpanded && (
+                              <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.2, ease: "easeInOut" }}
+                                className="overflow-hidden"
+                              >
+                                <ul className="list-disc pl-4 space-y-2 marker:text-neutral-400 dark:marker:text-neutral-700 mt-4">
+                                  {position.description.trim().split('\n').filter(line => line.trim()).map((line, i) => (
+                                    <li key={i} className="text-text-secondary text-sm/5 tracking-wide max-w-[512px]">
+                                      {line.trim()}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        ) : (
+                          <ul className="list-disc pl-4 space-y-2 marker:text-neutral-400 dark:marker:text-neutral-700 mt-4">
+                            {position.description.trim().split('\n').filter(line => line.trim()).map((line, i) => (
+                              <li key={i} className="text-text-secondary text-sm/5 tracking-wide max-w-[512px]">
+                                {line.trim()}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
-
-                      <ul className="list-disc pl-4 space-y-2  marker:text-neutral-400 dark:marker:text-neutral-700">
-                        {position.description.trim().split('\n').filter(line => line.trim()).map((line, i) => (
-                          <li key={i} className="text-text-secondary text-sm/5 tracking-wide max-w-[512px]">
-                            {line.trim()}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
 
 
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mt-4 md:pl-[56px] ">
-                {work.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 rounded-md text-black dark:text-white py-1 px-2  transition-colors text-xs"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              {work.company.toLowerCase() === "rentkar" ? (
+                <AnimatePresence initial={false}>
+                  {expandedPositions[`${work.company}-0`] !== false && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="flex flex-wrap gap-2 mt-4 md:pl-[56px] ">
+                        {work.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 rounded-md text-black dark:text-white py-1 px-2  transition-colors text-xs"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              ) : (
+                <div className="flex flex-wrap gap-2 mt-4 md:pl-[56px] ">
+                  {work.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 rounded-md text-black dark:text-white py-1 px-2  transition-colors text-xs"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
 
             </div>
           ))}

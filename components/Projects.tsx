@@ -60,7 +60,7 @@ const Projects = () => {
     <ViewArea showBorderTop={false}>
       <div >
 
-        <h2 className="text-black dark:text-white md:text-[22px] text-[20px] font-medium leading-none flex  tracking-normal md:pb-6 pb-4">
+        <h2 className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-none flex  tracking-normal md:pb-6 pb-4">
           Projects
         </h2>
 
