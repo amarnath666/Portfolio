@@ -21,7 +21,7 @@ const navItems: NavItem[] = [
         href: "#projects",
         className: "hidden md:flex"
     },
-    { name: "Contact", href: "mailto:amarnathdhumal2001@gmail.com" },
+    { name: "Contact", href: "#contact" },
 ];
 
 const Header = () => {

@@ -55,7 +55,7 @@ const ContactSection = () => {
         <ViewArea showBorderTop={false} >
             <div>
                 <h2 className="dark:text-white text-black text-[20px] md:text-[24px] font-medium leading-none flex tracking-normal pb-6">
-                    Contact Me
+                    Liked what you saw? Let&apos;s build something together.
                 </h2>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 max-w-xl">

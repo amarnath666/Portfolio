@@ -22,7 +22,9 @@ export default function Home() {
           <GalleryComponent />
         </div>
         <Divider />
-        <ContactSection />
+        <div id="contact">
+          <ContactSection />
+        </div>
       </div>
     </div>
   );

@@ -9,8 +9,8 @@ const GalleryComponent = () => {
     return (
         <ViewArea showBorderTop={false}>
             <div>
-                <h2 className="text-black dark:text-white md:text-[22px] text-[20px] font-medium leading-none flex tracking-normal md:pb-6 pb-4">
-                    Gallery
+                <h2 className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-none flex tracking-normal md:pb-6 pb-4">
+                    Cool components I&apos;ve crafted
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">

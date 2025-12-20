@@ -16,7 +16,7 @@ const Gallery = () => {
             <div>
                 <div className="flex flex-col gap-2">
                     <h1 className="text-[24px] md:text-[36px] font-outfit text-foreground tracking-normal font-medium leading-none">
-                        Gallery
+                        Cool components I&apos;ve crafted
                     </h1>
 
                     <AnimatedCyclingText texts={descriptions} />

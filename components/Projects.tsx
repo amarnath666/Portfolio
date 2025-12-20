@@ -61,7 +61,7 @@ const Projects = () => {
       <div >
 
         <h2 className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-none flex  tracking-normal md:pb-6 pb-4">
-          Projects
+          Some of the projects I&apos;ve built recently
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
