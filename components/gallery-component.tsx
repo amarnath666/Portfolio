@@ -1,6 +1,7 @@
 import React from "react";
 import ViewArea from "./ui/view-area";
 import GalleryCard from "./ui/gallery-card";
+import { ActionButton } from "./ui/action-button";
 import { galleryData } from "./data";
 import Link from "next/link";
 
@@ -19,11 +20,11 @@ const GalleryComponent = () => {
                 </div>
 
                 <div className="flex justify-center pt-8">
-                    <Link
-                        href="/gallery"
-                        className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 rounded-md text-black dark:text-white px-5 py-2.5 hover:bg-neutral-300 dark:hover:bg-neutral-900 transition-colors leading-none text-[16px] cursor-pointer tracking-normal ">
-                        View More
-                    </Link>
+                    <ActionButton asChild>
+                        <Link href="/gallery">
+                            View More
+                        </Link>
+                    </ActionButton>
                 </div>
             </div>
         </ViewArea>

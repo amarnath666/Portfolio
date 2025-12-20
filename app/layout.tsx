@@ -46,13 +46,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="bg-white dark:bg-black">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Prefetch critical images */}
         <link rel="prefetch" as="image" href="/images/profile.jpg" />
       </head>
       <body
-        className={` ${outfit.variable}  antialiased bg-white dark:bg-black`}
+        className={` ${outfit.variable}  antialiased`}
       >
         <ThemeProvider
           attribute="class"

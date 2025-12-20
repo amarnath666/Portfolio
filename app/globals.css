@@ -153,7 +153,7 @@ html {
 
   }
 
-  body {
+  html, body {
     @apply bg-background text-foreground;
     @apply font-outfit;
 

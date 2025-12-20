@@ -4,6 +4,7 @@ import Projects from "@/components/Projects";
 import Work from "@/components/Work";
 import Divider from "@/components/ui/divider";
 import GalleryComponent from "@/components/gallery-component";
+import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
         <div id="gallery">
           <GalleryComponent />
         </div>
+        <Divider />
+        <ContactSection />
       </div>
     </div>
   );

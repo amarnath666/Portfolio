@@ -25,6 +25,20 @@ bun run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
+## Environment Variables
+
+To enable the contact form functionality, create a `.env` file in the root directory and add the following variables:
+
+```env
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_PASS=your_app_password
+SMTP_FROM_EMAIL=your_email@gmail.com
+CONTACT_FORM_DESTINATION_EMAIL=your_email@gmail.com
+```
+
+> **Note:** For Gmail, `SMTP_PASS` should be an [App Password]
 ---
 
 ## ⭐ Please Star This Repository
