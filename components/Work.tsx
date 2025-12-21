@@ -143,7 +143,7 @@ const Work = () => {
                   </div>
 
                   {/* Company Info */}
-                  <div className="flex-1">
+                  <div className="flex-1 w-full">
                     <div className="flex flex-row items-start justify-between ">
                       <h4 className="text-base  dark:text-white text-black font-medium leading-none pb-2 tracking-wide ">
                         {work.company}
