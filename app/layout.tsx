@@ -41,6 +41,9 @@ export const metadata: Metadata = {
       "I'm Amarnath Dhumal, a Design Engineer and Developer with an eye for design, building SaaS products and web apps.",
     images: ["/images/og.png"],
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
