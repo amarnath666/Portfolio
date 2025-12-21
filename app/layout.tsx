@@ -4,6 +4,8 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/lib/theme-provider";
 import Header from "@/components/ui/header";
+import { CSPostHogProvider } from "./providers/posthog-provider";
+import PostHogPageView from "./providers/posthog-pageview";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -61,9 +63,12 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Analytics />
+          <CSPostHogProvider>
+            <PostHogPageView />
+            <Header />
+            {children}
+            <Analytics />
+          </CSPostHogProvider>
         </ThemeProvider>
       </body>
     </html>
