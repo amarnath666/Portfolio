@@ -1,8 +1,11 @@
 
+"use client";
 
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import ViewArea from "./ui/view-area";
+import BlurFade from "@/components/ui/blur-fade";
+import BlurFadeText from "@/components/ui/blur-fade-text";
 
 interface Project {
   title: string;
@@ -60,13 +63,17 @@ const Projects = () => {
     <ViewArea showBorderTop={false}>
       <div >
 
-        <h2 className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-none flex  tracking-normal md:pb-6 pb-4">
-          Some of the projects I&apos;ve built recently
-        </h2>
+        <BlurFadeText
+          delay={0.1}
+          className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-none flex  tracking-normal md:pb-6 pb-4"
+          text="Some of the projects I've built recently"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
           {projectData.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
+            <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
+              <ProjectCard {...project} />
+            </BlurFade>
           ))}
         </div>
       </div>
