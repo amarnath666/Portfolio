@@ -11,21 +11,22 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Amarnath Dhumal - Desgin Engineer",
+  metadataBase: new URL("https://www.amarn.me"),
+  title: "Amarnath Dhumal - Design Engineer",
   description:
-    "Amarnath Dhumal is a Desgin Engineer building SaaS products and web apps.",
+    "I'm Amarnath Dhumal, a Design Engineer and Developer with an eye for design, building SaaS products and web apps.",
   openGraph: {
-    title: "Amarnath Dhumal",
+    title: "Amarnath Dhumal - Design Engineer",
     description:
-      "Amarnath Dhumal is a Desgin Engineer building SaaS products and web apps.",
-    url: "https://www.amarn.me", // Replace with your actual URL
+      "I'm Amarnath Dhumal, a Design Engineer and Developer with an eye for design, building SaaS products and web apps.",
+    url: "https://www.amarn.me",
     siteName: "Amarnath Dhumal",
     images: [
       {
         url: "/images/og.png",
         width: 1200,
         height: 675, // Square aspect ratio
-        alt: "Amarnath Dhumal - Full Stack Developer",
+        alt: "Amarnath Dhumal - Design Engineer",
       },
     ],
     locale: "en_US",
@@ -33,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Amarnath Dhumal",
+    title: "Amarnath Dhumal - Design Engineer",
     description:
-      "Amarnath Dhumal is a Desgin Engineer building SaaS products and web apps.",
+      "I'm Amarnath Dhumal, a Design Engineer and Developer with an eye for design, building SaaS products and web apps.",
     images: ["/images/og.png"],
   },
 };

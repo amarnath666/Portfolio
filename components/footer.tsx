@@ -43,7 +43,7 @@ const Footer = () => {
                             backgroundPosition: ["0% 0%", "100% -100%"],
                         }}
                         transition={{
-                            duration: 15,
+                            duration: 40,
                             repeat: Infinity,
                             ease: "linear",
                         }}
