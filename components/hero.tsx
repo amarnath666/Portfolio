@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col pt-6">
           <p className="text-text-secondary text-sm/5 md:text-base/7 tracking-wide max-w-[512px]">
-            I write code, but I <span className="text-foreground">think in pixels</span>. I’m obsessed with the tiny details that turn a functional app into an <span className="text-foreground">experience people love</span>.
+            I don&apos;t just write code; I <span className="text-foreground">architect experiences</span>. From the first pixel to the final deploy, I obsess over the details that make software feel <span className="text-foreground">intuitive and alive</span>.
           </p>
 
 

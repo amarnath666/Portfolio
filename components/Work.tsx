@@ -111,7 +111,7 @@ const Work = () => {
       <div>
 
         <h2 className="dark:text-white text-black text-[20px] md:text-[24px] font-medium leading-none flex  tracking-normal pb-6">
-          Some cool places I&apos;ve worked at
+          Cool places I&apos;ve worked at
         </h2>
 
         {/* Work Experience */}
