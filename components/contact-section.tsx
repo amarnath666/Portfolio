@@ -58,7 +58,7 @@ const ContactSection = () => {
             <div>
                 <BlurFadeText
                     delay={0.1}
-                    className="dark:text-white text-black text-[20px] md:text-[24px] font-medium leading-none flex tracking-normal pb-6"
+                    className="dark:text-white text-black text-[20px] md:text-[24px] font-medium leading-[1.2] flex tracking-normal pb-6"
                     text="Liked what you saw? Let's build something together."
                 />
 

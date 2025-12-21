@@ -21,7 +21,7 @@ const Gallery = () => {
                 <div className="flex flex-col gap-2">
                     <BlurFadeText
                         delay={0.1}
-                        className="text-[24px] md:text-[36px] font-outfit text-foreground tracking-normal font-medium leading-none"
+                        className="text-[24px] md:text-[36px] font-outfit text-foreground tracking-normal font-medium leading-[1.2]"
                         text="Cool components I've crafted"
                     />
 

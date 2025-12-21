@@ -65,7 +65,7 @@ const Projects = () => {
 
         <BlurFadeText
           delay={0.1}
-          className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-none flex  tracking-normal md:pb-6 pb-4"
+          className="text-black dark:text-white md:text-[24px] text-[20px] font-medium  flex  tracking-normal md:pb-6 pb-4 leading-[1.2]"
           text="Some of the projects I've built recently"
         />
 

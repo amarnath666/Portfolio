@@ -15,7 +15,7 @@ const GalleryComponent = () => {
             <div>
                 <BlurFadeText
                     delay={0.1}
-                    className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-none flex tracking-normal md:pb-6 pb-4"
+                    className="text-black dark:text-white md:text-[24px] text-[20px] font-medium leading-[1.2] flex tracking-normal md:pb-6 pb-4"
                     text="Cool components I've crafted"
                 />
 
