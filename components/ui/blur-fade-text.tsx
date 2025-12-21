@@ -75,7 +75,7 @@ export default function BlurFadeText({
                     duration,
                     ease: "easeOut",
                 }}
-                className={cn("inline-block", className)}
+                className="inline-block"
             >
                 {text}
             </motion.span>

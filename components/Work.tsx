@@ -162,8 +162,8 @@ const Work = () => {
                           key={posIdx}
                           className={cn(
                             "flex flex-col w-full",
-                            posIdx !== work.positions.length - 1 &&
-                            " pb-6"
+                            posIdx !== work.positions.length - 1 && "pb-6"
+
                           )}
                         >
 
