@@ -26,6 +26,14 @@ export const galleryData: GalleryCardProps[] = [
         liveUrl: "https://www.chamaac.com/components/focus-button",
     },
 
+    // Text animaitons
+    {
+        title: "Dancing Letters",
+        videoSrc: "https://assets.amarn.me/dancing-letters.mp4",
+        liveUrl: "https://www.chamaac.com/components/dancing-letters",
+        isHomePage: true,
+    },
+
     // Sections
     {
         title: "Feature Steps",
@@ -58,7 +66,7 @@ export const galleryData: GalleryCardProps[] = [
         title: "Animated Icons",
         videoSrc: "https://assets.amarn.me/animated-icons.mp4",
         liveUrl: "https://www.chamaac.com/components/animated-icons",
-        isHomePage: true,
+
     },
     {
         title: "Dock",

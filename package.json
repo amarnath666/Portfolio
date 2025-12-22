@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "upload": "bun scripts/upload-gallery.ts",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky"
