@@ -29,7 +29,7 @@ export const galleryData: GalleryCardProps[] = [
     // Text animaitons
     {
         title: "Dancing Letters",
-        videoSrc: "https://assets.amarn.me/dancing-letters.mp4",
+        videoSrc: "https://assets.amarn.me/dancing-lettersv3.mp4",
         liveUrl: "https://www.chamaac.com/components/dancing-letters",
         isHomePage: true,
     },
