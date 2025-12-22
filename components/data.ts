@@ -46,12 +46,12 @@ export const galleryData: GalleryCardProps[] = [
         liveUrl: "https://www.chamaac.com/components/carousel",
     },
 
-    // Cards
-    {
-        title: "Orbiting Icons",
-        videoSrc: "https://assets.amarn.me/orbiting-icons.mp4",
-        liveUrl: "https://www.chamaac.com/components/orbiting-icons",
-    },
+    // // Cards
+    // {
+    //     title: "Orbiting Icons",
+    //     videoSrc: "https://assets.amarn.me/orbiting-icons.mp4",
+    //     liveUrl: "https://www.chamaac.com/components/orbiting-icons",
+    // },
 
     // Animated Icons
     {
