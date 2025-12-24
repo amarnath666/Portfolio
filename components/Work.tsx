@@ -114,7 +114,7 @@ const Work = () => {
 
         <BlurFadeText
           delay={0.1}
-          className="dark:text-white text-black text-[20px] md:text-[24px] font-medium leading-[1.2] flex  tracking-normal pb-6"
+          className="dark:text-white text-black text-[20px] md:text-[24px] font-medium leading-[1.2] flex  tracking-normal pb-6 "
           text="Cool places I've worked at"
         />
 
@@ -131,14 +131,14 @@ const Work = () => {
                       e.stopPropagation();
                       window.open(work.liveUrl, "_blank");
                     }}
-                    className="cursor-pointer"
+                    className="cursor-pointer border-neutral-200 dark:border-neutral-800/60 border-[1px] rounded-full"
                   >
                     <Image
                       src={work.imageSrc}
                       alt={work.company}
                       width={40}
                       height={40}
-                      className="rounded-full object-cover flex-shrink-0"
+                      className="rounded-full object-cover flex-shrink-0 "
                     />
                   </div>
 

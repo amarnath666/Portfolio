@@ -28,10 +28,10 @@ const ProjectCard = ({
     <>
       <div
         onClick={() => window.open(liveUrl, "_blank")}
-        className="flex flex-col border dark:border-neutral-800 border-neutral-200 rounded-md  cursor-pointer relative  transition-all duration-300"
+        className="flex flex-col border dark:border-neutral-800 border-neutral-200 rounded-md  relative  transition-all duration-300"
       >
-        {/* Image with Play Button */}
-        <div className="w-full relative overflow-hidden rounded-t-sm group  aspect-video ">
+        {/* Image  */}
+        <div className="w-full relative overflow-hidden rounded-t-sm group  aspect-video cursor-pointer">
           <Image
             src={imageSrc}
             alt={`${title} preview`}

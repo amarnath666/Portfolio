@@ -18,10 +18,10 @@ const navItems: NavItem[] = [
     { name: "Gallery", href: "/gallery" },
     {
         name: "Projects",
-        href: "#projects",
+        href: "/#projects",
         className: "hidden md:flex"
     },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/#contact" },
 ];
 
 const Header = () => {
@@ -32,14 +32,14 @@ const Header = () => {
         <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-black pt-[10px]">
             <ViewArea className="px-4 py-2 md:py-2">
                 <div className="flex flex-row items-center justify-between">
-                    <div onClick={() => router.push("/")}>
+                    <div onClick={() => router.push("/")} className="cursor-pointer">
 
                         <Image
                             src="/images/profile.jpg"
                             alt="profile"
                             width={40}
                             height={40}
-                            className="rounded-full cursor-pointer"
+                            className="rounded-full"
                             priority
                         />
                     </div>

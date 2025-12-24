@@ -4,6 +4,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/lib/theme-provider";
 import Header from "@/components/ui/header";
+import { FigmaCursor } from "@/components/ui/figma-cursor";
 import { CSPostHogProvider } from "./providers/posthog-provider";
 import PostHogPageView from "./providers/posthog-pageview";
 const outfit = Outfit({
@@ -66,6 +67,7 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
+          <FigmaCursor />
           <CSPostHogProvider>
             <PostHogPageView />
             <Header />

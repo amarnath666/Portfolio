@@ -18,9 +18,9 @@ export default function Home() {
           <Projects />
         </div>
         <Divider />
-        <div id="gallery">
-          <GalleryComponent />
-        </div>
+
+        <GalleryComponent />
+
         <Divider />
         <div id="contact">
           <ContactSection />
