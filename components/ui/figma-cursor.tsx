@@ -153,7 +153,7 @@ export const FigmaCursor = () => {
                     animate={{
                         scale: clicked ? 0.8 : 1,
                         opacity: 1,
-                        rotate: -25
+                        rotate: -20
                     }}
                     className="relative "
                 >
