@@ -3,6 +3,12 @@ import { GalleryCardProps } from "@/app/lib/types";
 export const galleryData: GalleryCardProps[] = [
     // Buttons
     {
+        title: "Gif Text",
+        videoSrc: "https://assets.amarn.me/gif-text.mp4",
+        liveUrl: "https://www.chamaac.com/components/gif-text",
+        isHomePage: true,
+    },
+    {
         title: "Premium Button",
         videoSrc: "https://assets.amarn.me/premium_button.mp4",
         liveUrl: "https://www.chamaac.com/components/premium-button",
@@ -18,7 +24,7 @@ export const galleryData: GalleryCardProps[] = [
         title: "Slide Up Button",
         videoSrc: "https://assets.amarn.me/slide-up-button.mp4",
         liveUrl: "https://www.chamaac.com/components/slideup-button",
-        isHomePage: true,
+
     },
     {
         title: "Focus Button",
