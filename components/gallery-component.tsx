@@ -30,7 +30,7 @@ const GalleryComponent = () => {
                 <div className="flex justify-center pt-8">
                     <BlurFade delay={0.4} inView>
                         <ActionButton asChild>
-                            <Link href="/gallery">
+                            <Link href="/components">
                                 View More
                             </Link>
                         </ActionButton>
