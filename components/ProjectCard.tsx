@@ -28,10 +28,10 @@ const ProjectCard = ({
     <>
       <div
         onClick={() => window.open(liveUrl, "_blank")}
-        className="flex flex-col border dark:border-neutral-800 border-neutral-200 rounded-md  relative  transition-all duration-300"
+        className="flex flex-col border dark:border-neutral-800 border-neutral-200 rounded-md  relative  transition-all duration-300  cursor-pointer"
       >
         {/* Image  */}
-        <div className="w-full relative overflow-hidden rounded-t-sm group  aspect-video cursor-pointer">
+        <div className="w-full relative overflow-hidden rounded-t-sm group  aspect-video">
           <Image
             src={imageSrc}
             alt={`${title} preview`}
@@ -98,7 +98,7 @@ const ProjectCard = ({
 
         </div>
 
-      </div>
+      </div >
 
       {/* Video Modal */}
       {/* <AnimatePresence>
