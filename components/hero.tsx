@@ -7,12 +7,12 @@ import ScribbledArrowToRight from "@/app/lib/utilis/svg";
 import BlurFadeText from "@/components/ui/blur-fade-text";
 import BlurFade from "@/components/ui/blur-fade";
 
-const roles = ["Design Engineer", "Full Stack Developer", "App Developer"]
+const roles = ["Design Engineer"]
 
 const Hero = () => {
   return (
-    <ViewArea showBorderTop={false} showTopDots={false} showBottomDots={false}>
-      <div className="flex flex-col items-start justify-center">
+    <ViewArea showBorderTop={false} showTopDots={false} showBottomDots={false} >
+      <div className="flex flex-col items-start justify-center md:py-4">
         <div className="flex flex-row  items-center w-full">
 
           <div className="flex flex-col items-start gap-2 w-full">

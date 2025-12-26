@@ -12,11 +12,12 @@ export default function Home() {
       <div className="w-full pt-[66px] pb-[10px]">
         <Hero />
         <Divider />
-        <Work />
-        <Divider />
         <div id="projects">
           <Projects />
         </div>
+        <Divider />
+
+        <Work />
         <Divider />
 
         <GalleryComponent />

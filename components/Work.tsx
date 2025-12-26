@@ -97,14 +97,12 @@ Developed and integrated backend APIs to fetch and display dynamic data, ensurin
 ];
 
 const Work = () => {
-  const [expandedPositions, setExpandedPositions] = useState<Record<string, boolean>>({
-    "Rentkar-0": false,
-  });
+  const [expandedCompanies, setExpandedCompanies] = useState<Record<string, boolean>>({});
 
-  const toggleExpand = (id: string) => {
-    setExpandedPositions((prev) => ({
+  const toggleExpand = (company: string) => {
+    setExpandedCompanies((prev) => ({
       ...prev,
-      [id]: !prev[id],
+      [company]: !prev[company],
     }));
   };
 
@@ -120,96 +118,96 @@ const Work = () => {
 
         {/* Work Experience */}
         <div className="flex flex-col gap-8">
-          {workData.map((work, idx) => (
-            <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
-              <div className="flex flex-col relative">
-                {/* Logo + Content */}
-                <div className="flex md:flex-row flex-col items-start gap-4 ">
-                  {/* Logo */}
-                  <div
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      window.open(work.liveUrl, "_blank");
-                    }}
-                    className="cursor-pointer border-neutral-200 dark:border-neutral-800/60 border-[1px] rounded-full"
-                  >
-                    <Image
-                      src={work.imageSrc}
-                      alt={work.company}
-                      width={40}
-                      height={40}
-                      className="rounded-full object-cover flex-shrink-0 "
-                    />
-                  </div>
+          {workData.map((work, idx) => {
+            const isExpanded = expandedCompanies[work.company] === true;
 
-                  {/* Company Info */}
-                  <div className="flex-1 w-full">
-                    <div className="flex flex-row items-start justify-between ">
-                      <h4 className="text-base  dark:text-white text-black font-medium leading-none pb-2 tracking-wide ">
-                        {work.company}
-                      </h4>
-                      <p className="text-sm  text-text-secondary leading-none tracking-wide">
-                        {work.location}
-                      </p>
+            return (
+              <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
+                <div className="flex flex-col relative">
+                  {/* Logo + Content */}
+                  <div className="flex md:flex-row flex-col items-start gap-4 ">
+                    {/* Logo */}
+                    <div
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(work.liveUrl, "_blank");
+                      }}
+                      className="cursor-pointer border-neutral-200 dark:border-neutral-800/60 border-[1px] rounded-full"
+                    >
+                      <Image
+                        src={work.imageSrc}
+                        alt={work.company}
+                        width={40}
+                        height={40}
+                        className="rounded-full object-cover flex-shrink-0 "
+                      />
                     </div>
-                    {work.positions.map((position, posIdx) => {
-                      const id = `${work.company}-${posIdx}`;
-                      const isRentkar = work.company.toLowerCase() === "rentkar";
-                      const isExpanded = expandedPositions[id] !== false;
 
-                      return (
-                        <div
-                          key={posIdx}
-                          className={cn(
-                            "flex flex-col w-full",
-                            posIdx !== work.positions.length - 1 && "pb-6"
+                    {/* Company Info */}
+                    <div className="flex-1 w-full">
+                      <div className="flex flex-row items-center justify-between ">
+                        <h4 className="text-base dark:text-white text-black font-medium leading-none pb-2 tracking-wide flex items-center gap-2">
+                          {work.company}
+                          <motion.button
+                            onClick={() => toggleExpand(work.company)}
+                            className="p-1 hover:bg-neutral-200 dark:hover:bg-neutral-800 cursor-pointer rounded-[8px] group"
+                          >
+                            <motion.svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              animate={{ rotate: isExpanded ? 180 : 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="text-neutral-400 dark:text-neutral-600 group-hover:text-black dark:group-hover:text-white"
+                            >
+                              <path d="m6 9 6 6 6-6" />
+                            </motion.svg>
+                          </motion.button>
+                        </h4>
+                        <p className="text-sm  text-text-secondary leading-none tracking-wide">
+                          {work.location}
+                        </p>
+                      </div>
+                      {work.positions.map((position, posIdx) => {
+                        // For the first role (current/latest), always show title/time.
+                        // For subsequent roles (history), only show if expanded.
+                        if (posIdx > 0 && !isExpanded) return null;
 
-                          )}
-                        >
+                        return (
+                          <motion.div
+                            key={posIdx}
+                            initial={posIdx > 0 ? { height: 0, opacity: 0 } : undefined}
+                            animate={posIdx > 0 ? { height: "auto", opacity: 1 } : undefined}
+                            exit={posIdx > 0 ? { height: 0, opacity: 0 } : undefined}
+                            className={cn(
+                              "flex flex-col w-full",
+                              posIdx !== work.positions.length - 1,
+                              // Add top padding for secondary roles to separate from the one above
+                              posIdx > 0 && "pt-6"
+                            )}
+                          >
+                            <div className="flex flex-row items-center justify-between w-full gap-4">
+                              <h4 className="text-sm text-black dark:text-white leading-none tracking-wide flex items-center gap-2">
+                                {position.shortRole ? (
+                                  <>
+                                    <span className="md:hidden">{position.shortRole}</span>
+                                    <span className="hidden md:inline">{position.role}</span>
+                                  </>
+                                ) : (
+                                  position.role
+                                )}
+                              </h4>
+                              <h4 className="text-sm text-text-secondary leading-none tracking-wide">
+                                {position.timeLine}
+                              </h4>
+                            </div>
 
-                          <div className="flex flex-row items-center justify-between w-full  gap-4">
-
-                            <h4 className="text-sm text-black dark:text-white leading-none tracking-wide flex items-center gap-2">
-                              {position.shortRole ? (
-                                <>
-                                  <span className="md:hidden">{position.shortRole}</span>
-                                  <span className="hidden md:inline">{position.role}</span>
-                                </>
-                              ) : (
-                                position.role
-                              )}
-                              {isRentkar && (
-                                <motion.button
-
-                                  onClick={() => toggleExpand(id)}
-                                  className="p-1 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-neutral-400 dark:text-neutral-600 hover:text-black dark:hover:text-white"
-                                >
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <motion.path
-                                      initial={false}
-                                      animate={{ d: isExpanded ? "M7 20L12 15L17 20" : "M7 15L12 20L17 15" }}
-                                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                                    />
-                                    <motion.path
-                                      initial={false}
-                                      animate={{ d: isExpanded ? "M7 4L12 9L17 4" : "M7 9L12 4L17 9" }}
-                                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                                    />
-                                  </svg>
-                                </motion.button>
-                              )}
-                            </h4>
-
-
-
-                            <h4 className="text-sm text-text-secondary leading-none tracking-wide">
-                              {position.timeLine}
-                            </h4>
-
-
-                          </div>
-
-                          {isRentkar ? (
                             <AnimatePresence initial={false}>
                               {isExpanded && (
                                 <motion.div
@@ -229,27 +227,15 @@ const Work = () => {
                                 </motion.div>
                               )}
                             </AnimatePresence>
-                          ) : (
-                            <ul className="list-disc pl-4 space-y-2 marker:text-neutral-400 dark:marker:text-neutral-700 mt-4">
-                              {position.description.trim().split('\n').filter(line => line.trim()).map((line, i) => (
-                                <li key={i} className="text-text-secondary text-sm/5 tracking-wide max-w-[512px]">
-                                  {line.trim()}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      );
-                    })}
+                          </motion.div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
 
-
-
-                {/* Tech Stack */}
-                {work.company.toLowerCase() === "rentkar" ? (
+                  {/* Tech Stack */}
                   <AnimatePresence initial={false}>
-                    {expandedPositions[`${work.company}-0`] !== false && (
+                    {isExpanded && (
                       <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
@@ -270,22 +256,11 @@ const Work = () => {
                       </motion.div>
                     )}
                   </AnimatePresence>
-                ) : (
-                  <div className="flex flex-wrap gap-2 mt-4 md:pl-[56px] ">
-                    {work.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="border border-dashed border-neutral-400 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 rounded-md text-black dark:text-white py-1 px-2  transition-colors text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                )}
 
-              </div>
-            </BlurFade>
-          ))}
+                </div>
+              </BlurFade>
+            );
+          })}
         </div>
       </div>
     </ViewArea>

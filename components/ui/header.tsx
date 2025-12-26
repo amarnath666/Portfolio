@@ -15,12 +15,12 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-    { name: "Gallery", href: "/gallery" },
     {
         name: "Projects",
         href: "/#projects",
-        className: "hidden md:flex"
     },
+    { name: "Components", href: "/components", className: "hidden md:flex" },
+
     { name: "Contact", href: "/#contact" },
 ];
 

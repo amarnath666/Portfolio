@@ -206,8 +206,8 @@ export const FigmaCursor = () => {
                 style={{
                     // Offset to align fingertip with actual mouse position
                     // The SVG fingertip is at ~(11, 9) in 24x24 viewBox, scaled to ~(18, 15) at 40px
-                    left: '-18px',
-                    top: '-14px',
+                    left: '-15px',
+                    top: '-8px',
                     willChange: 'transform, opacity',
                     transform: clicked && isPointer ? 'scale(0.85) rotate(-10deg)' : 'scale(1) rotate(0deg)',
                 }}

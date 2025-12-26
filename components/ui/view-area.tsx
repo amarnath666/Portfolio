@@ -41,7 +41,7 @@ const ViewArea = ({
         <div className={outerBorderClasses}>
             <div className={cn(
                 innerBorderClasses,
-                "w-full h-auto relative px-4 py-8 md:py-12 max-w-3xl mx-auto ",
+                "w-full h-auto relative px-4 py-8 max-w-3xl mx-auto ",
                 className
             )}>
                 <Dots
