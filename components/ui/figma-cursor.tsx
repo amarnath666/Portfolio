@@ -9,8 +9,24 @@ export const FigmaCursor = () => {
     const [hidden, setHidden] = useState(false);
     const [clicked, setClicked] = useState(false);
     const [isPointer, setIsPointer] = useState(false);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
+        // Check if device supports touch (mobile/tablet)
+        const checkTouchDevice = () => {
+            setIsTouchDevice(
+                'ontouchstart' in window ||
+                navigator.maxTouchPoints > 0 ||
+                window.matchMedia("(pointer: coarse)").matches
+            );
+        };
+
+        checkTouchDevice();
+    }, []);
+
+    useEffect(() => {
+        // Don't add cursor listeners on touch devices
+        if (isTouchDevice) return;
         const onMouseMove = (e: MouseEvent) => {
             setPosition({ x: e.clientX, y: e.clientY });
 
@@ -75,7 +91,10 @@ export const FigmaCursor = () => {
                 existingStyle.remove();
             }
         };
-    }, []);
+    }, [isTouchDevice]);
+
+    // Don't render cursor on touch devices
+    if (isTouchDevice) return null;
 
     return (
         <motion.div
