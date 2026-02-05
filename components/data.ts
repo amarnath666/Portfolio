@@ -10,7 +10,7 @@ export const galleryData: GalleryCardProps[] = [
     {
         title: "How It Works",
         videoSrc: "https://assets.amarn.me/how-it-works.mp4",
-        liveUrl: "https://www.chamaac.com/components/how-it-works",
+        liveUrl: "https://www.chamaac.com/components/sections/how-it-works",
         isHomePage: true,
     },
     {

@@ -58,6 +58,27 @@ export default function RootLayout({
       <head>
         {/* Prefetch critical images */}
         <link rel="prefetch" as="image" href="/images/profile.jpg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Amarnath Dhumal",
+              url: "https://www.amarn.me",
+              image: "https://www.amarn.me/images/profile.jpg",
+              jobTitle: "Design Engineer",
+              description: "Design Engineer and Developer with an eye for design, building SaaS products and web apps.",
+              sameAs: [
+                "https://x.com/amarnathdhumal",
+                "https://github.com/amarnathdhumal",
+                "https://linkedin.com/in/amarnathdhumal"
+              ],
+              email: "mailto:hello@amarn.me",
+              telephone: "+918367260182"
+            })
+          }}
+        />
       </head>
       <body
         className={` ${outfit.variable} antialiased`}
