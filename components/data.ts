@@ -2,6 +2,24 @@ import { GalleryCardProps } from "@/app/lib/types";
 
 export const galleryData: GalleryCardProps[] = [
     {
+        title: "Liquid Chrome",
+        videoSrc: "https://assets.amarn.me/liquid-chrome.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/liquid-chrome",
+        isHomePage: true,
+    },
+    {
+        title: "Nebula",
+        videoSrc: "https://assets.amarn.me/nebula.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/nebula",
+        isHomePage: true,
+    },
+    {
+        title: "Waves",
+        videoSrc: "https://assets.amarn.me/waves.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/waves",
+
+    },
+    {
         title: "Animated Icons",
         videoSrc: "https://assets.amarn.me/animated-icons2.mp4",
         liveUrl: "https://www.chamaac.com/components/animated-icons",
@@ -35,7 +53,7 @@ export const galleryData: GalleryCardProps[] = [
         title: "Premium Button",
         videoSrc: "https://assets.amarn.me/premium_button.mp4",
         liveUrl: "https://www.chamaac.com/components/buttons/premium-button",
-        isHomePage: true,
+
     },
     {
         title: "Glowing Border Button",
@@ -91,7 +109,7 @@ export const galleryData: GalleryCardProps[] = [
         title: "Gauge",
         videoSrc: "https://assets.amarn.me/gauge.mp4",
         liveUrl: "https://www.chamaac.com/components/sections/gauge",
-        isHomePage: true,
+
     },
 
     // Carousels
