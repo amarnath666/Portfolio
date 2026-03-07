@@ -2,6 +2,12 @@ import { GalleryCardProps } from "@/app/lib/types";
 
 export const galleryData: GalleryCardProps[] = [
     {
+        title: "Astral Flow",
+        videoSrc: "https://assets.amarn.me/astral-flow.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/astral-flow",
+        isHomePage: true,
+    },
+    {
         title: "Liquid Chrome",
         videoSrc: "https://assets.amarn.me/liquid-chrome.mp4",
         liveUrl: "https://www.chamaac.com/components/backgrounds/liquid-chrome",
@@ -20,6 +26,11 @@ export const galleryData: GalleryCardProps[] = [
 
     },
     {
+        title: "Grid Bloom",
+        videoSrc: "https://assets.amarn.me/grid-bloom-v3.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/grid-bloom",
+    },
+    {
         title: "Animated Icons",
         videoSrc: "https://assets.amarn.me/animated-icons2.mp4",
         liveUrl: "https://www.chamaac.com/components/animated-icons",
@@ -33,9 +44,8 @@ export const galleryData: GalleryCardProps[] = [
     },
     {
         title: "Interactive Grid",
-        videoSrc: " https://assets.amarn.me/interactive-grid.mp4",
+        videoSrc: "https://assets.amarn.me/interactive-grid.mp4",
         liveUrl: "https://www.chamaac.com/components/backgrounds/interactive-grid",
-        isHomePage: true
     },
     // Buttons
     {
@@ -46,7 +56,7 @@ export const galleryData: GalleryCardProps[] = [
     },
     {
         title: "Gif Text",
-        videoSrc: "https://assets.amarn.me/gif-text.mp4",
+        videoSrc: "https://assets.amarn.me/gif-text-v2.mp4",
         liveUrl: "https://www.chamaac.com/components/text-animations/gif-text",
     },
     {
@@ -75,6 +85,11 @@ export const galleryData: GalleryCardProps[] = [
         videoSrc: "https://assets.amarn.me/slide-up-button.mp4",
         liveUrl: "https://www.chamaac.com/components/buttons/slideup-button",
 
+    },
+    {
+        title: "Hover Arrow Button",
+        videoSrc: "https://assets.amarn.me/hover-arrow-button.mp4",
+        liveUrl: "https://www.chamaac.com/components/buttons/hover-arrow-button",
     },
     {
         title: "Focus Button",
