@@ -7,12 +7,7 @@ export const galleryData: GalleryCardProps[] = [
         liveUrl: "https://www.chamaac.com/components/backgrounds/astral-flow",
         isHomePage: true,
     },
-    {
-        title: "Liquid Chrome",
-        videoSrc: "https://assets.amarn.me/liquid-chrome.mp4",
-        liveUrl: "https://www.chamaac.com/components/backgrounds/liquid-chrome",
-        isHomePage: true,
-    },
+
     {
         title: "Nebula",
         videoSrc: "https://assets.amarn.me/nebula.mp4",
@@ -20,15 +15,21 @@ export const galleryData: GalleryCardProps[] = [
         isHomePage: true,
     },
     {
+        title: "Grid Bloom",
+        videoSrc: "https://assets.amarn.me/grid-bloom-v3.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/grid-bloom",
+        isHomePage: true,
+    },
+    {
+        title: "Liquid Chrome",
+        videoSrc: "https://assets.amarn.me/liquid-chrome.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/liquid-chrome",
+    },
+    {
         title: "Waves",
         videoSrc: "https://assets.amarn.me/waves.mp4",
         liveUrl: "https://www.chamaac.com/components/backgrounds/waves",
 
-    },
-    {
-        title: "Grid Bloom",
-        videoSrc: "https://assets.amarn.me/grid-bloom-v3.mp4",
-        liveUrl: "https://www.chamaac.com/components/backgrounds/grid-bloom",
     },
     {
         title: "Animated Icons",
