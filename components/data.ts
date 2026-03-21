@@ -2,6 +2,18 @@ import { GalleryCardProps } from "@/app/lib/types";
 
 export const galleryData: GalleryCardProps[] = [
     {
+        title: "Synthesis",
+        videoSrc: "https://assets.amarn.me/synthesis.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/synthesis",
+        isHomePage: true,
+    },
+    {
+        title: "Electric Mist",
+        videoSrc: "https://assets.amarn.me/electric-mist.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/electric-mist",
+        isHomePage: true,
+    },
+    {
         title: "Astral Flow",
         videoSrc: "https://assets.amarn.me/astral-flow.mp4",
         liveUrl: "https://www.chamaac.com/components/backgrounds/astral-flow",
@@ -12,7 +24,6 @@ export const galleryData: GalleryCardProps[] = [
         title: "Nebula",
         videoSrc: "https://assets.amarn.me/nebula.mp4",
         liveUrl: "https://www.chamaac.com/components/backgrounds/nebula",
-        isHomePage: true,
     },
     {
         title: "Grid Bloom",
@@ -35,7 +46,6 @@ export const galleryData: GalleryCardProps[] = [
         title: "Animated Icons",
         videoSrc: "https://assets.amarn.me/animated-icons2.mp4",
         liveUrl: "https://www.chamaac.com/components/animated-icons",
-        isHomePage: true,
     },
     {
         title: "How It Works",
