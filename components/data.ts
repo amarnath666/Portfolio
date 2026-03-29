@@ -2,6 +2,12 @@ import { GalleryCardProps } from "@/app/lib/types";
 
 export const galleryData: GalleryCardProps[] = [
     {
+        title: "Light Speed",
+        videoSrc: "https://assets.amarn.me/light-speed.mp4",
+        liveUrl: "https://www.chamaac.com/components/backgrounds/light-speed",
+        isHomePage: true,
+    },
+    {
         title: "Synthesis",
         videoSrc: "https://assets.amarn.me/synthesis.mp4",
         liveUrl: "https://www.chamaac.com/components/backgrounds/synthesis",
@@ -51,7 +57,6 @@ export const galleryData: GalleryCardProps[] = [
         title: "How It Works",
         videoSrc: "https://assets.amarn.me/how-it-works.mp4",
         liveUrl: "https://www.chamaac.com/components/sections/how-it-works",
-        isHomePage: true,
     },
     {
         title: "Interactive Grid",
