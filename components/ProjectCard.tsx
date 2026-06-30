@@ -28,10 +28,10 @@ const ProjectCard = ({
     <>
       <div
         onClick={() => window.open(liveUrl, "_blank")}
-        className="flex flex-col border dark:border-neutral-800 border-neutral-200 rounded-md  relative  transition-all duration-300  cursor-pointer"
+        className="grid grid-cols-1 md:grid-cols-2 border dark:border-neutral-800 border-neutral-200 rounded-md relative overflow-hidden transition-all duration-300 cursor-pointer"
       >
         {/* Image  */}
-        <div className="w-full relative overflow-hidden rounded-t-sm group  aspect-video">
+        <div className="w-full relative overflow-hidden group aspect-video">
           <Image
             src={imageSrc}
             alt={`${title} preview`}
@@ -56,14 +56,22 @@ const ProjectCard = ({
         </div>
 
         {/* Content */}
-        <div className="flex flex-col  px-4 py-4 md:py-4">
-          <h3 className="text-lg font-medium text-white transition-colors duration-300 leading-none">
-            {title}
-          </h3>
+        <div className="flex flex-col justify-between px-4 py-5 md:p-6">
+          <div>
+            <h3 className="text-xl md:text-2xl font-medium text-black dark:text-white transition-colors duration-300 leading-none">
+              {title}
+            </h3>
 
-          <p className="text-text-secondary text-sm/5 tracking-wide max-w-[512px] pt-2 pb-4">
-            {description}
-          </p>
+            <p className="text-text-secondary text-sm/5 tracking-wide max-w-[512px] pt-3 pb-6">
+              {description.includes("2,000+ people every month") ? (
+                <>
+                  {description.split("2,000+ people every month")[0]}
+                  <span className="text-white">2,000+ people every month</span>
+                  {description.split("2,000+ people every month")[1]}
+                </>
+              ) : description}
+            </p>
+          </div>
 
           <div className="flex flex-row justify-between items-center">
             <div className="flex -space-x-2  transition-all duration-300 flex-wrap">

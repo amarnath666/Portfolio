@@ -19,41 +19,13 @@ interface Project {
 
 const projectData: Project[] = [
   {
-    title: "Chamaac",
-    description: "Developing a comprehensive UI library featuring 10+ reusable components, designed for scalability, accessibility, and modern aesthetics.",
+    title: "Chamaac UI",
+    description: "A growing collection of reusable, accessible, and beautifully animated UI components used by 2,000+ people every month to create polished interfaces faster.",
     imageSrc: "/images/chamaac.png",
     videoSrc: "/videos/ytnotes.mp4",
     liveUrl: "https://www.chamaac.com",
     githubUrl: "https://github.com/amarnathdhumal/chamaacui",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "Sidekick",
-    description:
-      "A sleek, visually stunning landing page template optimized for side projects, featuring a modular design and easy customization.",
-    videoSrc: "/videos/SideKick.mp4",
-    imageSrc: "/images/side.png",
-    liveUrl: "https://sidekick.amarn.me",
-    githubUrl: "https://github.com/amarnathdhumal/Side-Project-Template",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-  },
-  {
-    title: "YT Notes",
-    description: "An intelligent AI-powered agent that generates concise, accurate summaries of YouTube videos in seconds, streamlining content consumption.",
-    videoSrc: "/videos/YTNotes.mp4",
-    imageSrc: "/images/yt.png",
-    liveUrl: "https://www.ytnotes.online",
-    githubUrl: "https://github.com/amarnathdhumal/YTNotes",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Razorpay", "Tailwind CSS"],
-  },
-  {
-    title: "Sketch Sync",
-    description: "A unified workspace combining a powerful rich text editor with an infinite canvas for sketching and ideation.",
-    videoSrc: "/videos/SketchSync.mp4",
-    imageSrc: "/images/sketch.png",
-    liveUrl: "https://sketchsync-canvas.vercel.app",
-    githubUrl: "https://github.com/amarnathdhumal/SketchSync",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Convex"],
   },
 ];
 
@@ -66,10 +38,10 @@ const Projects = () => {
         <BlurFadeText
           delay={0.1}
           className="text-black dark:text-white md:text-[24px] text-[20px] font-medium  flex  tracking-normal md:pb-6 pb-4 leading-[1.2]"
-          text="Some of the projects I've built recently"
+          text="Featured project"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {projectData.map((project, idx) => (
             <BlurFade key={idx} delay={0.25 + idx * 0.05} inView>
               <ProjectCard {...project} />

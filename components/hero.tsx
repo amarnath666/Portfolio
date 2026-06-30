@@ -7,7 +7,7 @@ import ScribbledArrowToRight from "@/app/lib/utilis/svg";
 import BlurFadeText from "@/components/ui/blur-fade-text";
 import BlurFade from "@/components/ui/blur-fade";
 
-const roles = ["Design Engineer"]
+const roles = ["Design Engineer", "App Developer"]
 
 const Hero = () => {
   return (
